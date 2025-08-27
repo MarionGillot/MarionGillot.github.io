@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="fr" x-data="{ menuIsOpen: false }" :class="menuIsOpen && 'noscroll'">
+
+<head>
+    <title>Cover d'album</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Marion Gillot, étudiante en 2ème année en MMi Métier du Multimédia et de l'Internet" />
+    <meta name="keywords" content="portfolio, design, webdesigner, graphit, web">
+    
+    <link rel="shortcut icon" href="src/favicon.ico">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" type="text/css" href="src/scss/main.scss">
+    <link rel="stylesheet" type="text/css" href="src/scss/main.css">
+    <link src="src/js/index.js"></link>
+    <script defer="" src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
+</head>
+
+<body x-data="{ atTop: true }" >
+
+  <header>
+    <div class="mobile-header" @scroll.window="atTop = ( window.scrollY > 100 ? false : true )" >
+
+      <div class="header__bar__mobile"> 
+        <button onclick="toggleDarkMode()">
+          <img class="header__logo__mode" id="mode-toggle" src="public/icon/icon_moon.svg" alt="logo du mode dark">
+        </button>
+        
+        <button class="header__menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
+                @pointerdown="menuIsOpen = !menuIsOpen" 
+                :class="menuIsOpen && 'menu-btn--open'">
+          <span class="menu-btn__bar"></span>
+        </button>
+
+        <nav class="header__menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
+          <ul class="menu__list list-unstyled">
+            <li class="menu__item"><a class="menu__link" href="index.html">Projets</a></li>
+            <li class="menu__item"><a class="menu__link" href="apropos.html">À propos</a></li>
+            <select id="header__language__select">
+
+              <option value="english">EN</option>
+              <option value="french">FR</option>
+              <option value="spanish">ESP</option>
+            </select>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+  <div class="desktop-header">
+
+    <div class="header__start">
+
+    <select id="header__language__select">
+
+      <option value="english">EN</option>
+      <option value="french">FR</option>
+      <option value="spanish">ESP</option>
+    </select>
+
+    <button onclick="toggleDarkMode()">
+            <img class="header__logo__mode" id="mode-toggle" src="public/icon/icon_moon.svg" alt="logo du mode dark">
+    </button>
+ 
+    </div>
+
+    <div class="header__end">
+
+      <nav>
+        <ul class="navigation">
+          <li><a href="index.html">Projets</a></li>
+          <li><a href="apropos.html">À propos</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </div>
+      
+</header> 
+
+
+<main>
+
+  <div id="progress"></div>
+
+  <span id="cursor">
+    <svg height="30" width="30">
+      <circle cx="15" cy="15" r="12" stroke-width="0" fill="#f7f8fa"/>
+    </svg>
+  </span>
+
+  
+			
+  <div class="content-description">
+    <div class="mini-info">
+            <ul>
+                <li><h3 class="no-line">Année</h3>
+                <p>2023</p></li>
+            </ul>
+            <ul>
+                <li><h3 class="no-line">Logiciels</h3>
+                  <p>Photoshop</p>
+                  <p>Illustrator</p>
+        
+                </li>
+            </ul>
+        </div>
+
+        <div class="info">
+            <h2>Gamze Aydemir</h2>
+            <p>Le projet demandé était de créer une cover pour un album de musique intitulé "Gamze Aydemir". 
+              L'objectif était de représenter l'atmosphère mélancolique et poétique de l'album, tout en créant une image 
+              visuelle élégante et intemporelle.</p>
+       </div>
+</div> 
+
+
+
+<img src="public/img/projets/album-illustration-1.jpg" alt="affiche de l'album Gamze Aydemir">
+
+<div class="flex__text">
+  <div><h3>Le concept</h3></div>
+  <div><p>Le choix de l'album "Gamze Aydemir" a été motivé par l'envie de créer une cover pour un projet de musique intemporelle, 
+    qui a une ambiance mélancolique mais aussi romantique. Les chansons de Gamze Aydemir sont souvent douces et pleines d'émotions, 
+    ce qui a inspiré la création d'une cover qui évoque ces sensations.</p></div>
+</div>
+
+<div class="flex__img_text">
+  <div>
+    <p>La cover a été conçue en noir et blanc pour refléter l'ambiance nostalgique et romantique de l'album. Les traces d'eau qui 
+      s'écoulent sur la droite de la cover évoquent l'idée de la fluidité et de l'écoulement du temps qui passe. L'image d'une femme en 
+      noir et blanc à l'intérieur de ces traces d'eau ajoute une dimension poétique et énigmatique à la cover.</p>
+
+      <p class="up">L'image de la femme a été choisie pour représenter la poésie et la douceur de l'album, et a été travaillée en noir 
+        et blanc pour créer un effet classique et élégant.
+      </p>
+  </div>
+
+    <div>
+      <img src="public/img/projets/album-cover.jpg" alt="Couverture de l'album Gamze Aydemir">
+    </div>
+</div>
+
+<div class="section__center">
+  <h3>Typographie</h3>
+</div>
+
+<div class="flex__img_text">
+  <div>
+    <p>Le titre de l'album "Gamze Aydemir" est écrit en lettres majuscules blanches, en contraste avec le fond noir de la cover. 
+      Le texte "Just friends." est écrit en noir en haut de la cover, créant un équilibre visuel et ajoutant un élément de mystère 
+      à la cover.</p>
+  </div>
+
+  <div>
+    <img id="myImage" src="" alt="Typographie de l'album Gamze Aydemir">
+</div>
+</div>
+
+
+<div class="flex__text">
+  <div><h3>Les couleurs</h3></div>
+  <div><p>Le choix du noir et blanc pour la cover reflète l'ambiance mélancolique et nostalgique de l'album. 
+    Le contraste entre les deux couleurs ajoute de la profondeur et de la texture à l'image, tout en créant une atmosphère intemporelle.
+  </p></div>
+</div>
+
+
+
+<img src="public/img/projets/album-illustration-2.jpg" alt="Album en cd" > 
+
+
+
+<div class="other">
+  <div class="other__arrow">
+    <a href="work-lumei.html">
+      <img src="public/icon/icon_arrow-back.svg" alt="icône de flèche : projet précèdent">
+      <p>Projet précèdent</p>
+    </a>
+  </div>
+ 
+  <div class="other__arrow">
+    <a href="work-reve.html">
+      <img src="public/icon/icon_arrow-after.svg" alt="icône de flèche : projet suivant">
+      <p>Projet suivant</p>
+    </a>
+  </div>
+
+</div>
+
+
+<footer class="footer">
+
+  <div class="footer__grid">
+  <div class="footer__contact">
+      <h4 class="footer__title">Marion Gillot</h4>
+      <p><a href="tel:0384542727">07 82 94 35 03</a></p>
+      <p><a href="mailto:mgillot.pro@gmail.com" target="_blank">mgillot.pro@gmail.com</a></p>
+  </div>
+
+  <div class="footer__social">
+      <h4 class="footer__title">Me suivre</h4>
+    <ul class="footer__list list-unstyled">
+      <li><a href="https://www.instagram.com/marion_gillot/" target="_blank" aria-label="instagram"><img src="public/icon/icon_insta.svg" alt="icone instagram"></a></li>
+      <li><a href="https://www.behance.net/tc_1820gillot" target="_blank" aria-label="behance"><img src="public/icon/icon_behance.svg" alt="icone behance"></a></li>
+      <li><a href="https://twitter.com/marion_082" target="_blank" aria-label="twitter"><img src="public/icon/icon_twitter.svg" alt="icone twitter"></a></li>
+      <li><a href="https://www.linkedin.com/in/marion-gillot-8133a7224/" target="_blank" aria-label="linkedin"><img src="public/icon/icon_linkedin.svg" alt="icone linkedin"></a></li>
+    </ul>
+  </div>
+  </div>
+
+    <a href="conditions.html"><span class="footer__license">©mariongillot | Tous droits réservés.</span></a>
+  
+</footer>
+
+    </main>
+</body>
+</html>
+
+<script>
+
+
+const myImage = document.getElementById('myImage');
+const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+const lightModeMediaQuery = window.matchMedia('(prefers-color-scheme: light)');
+
+function toggleImageSrc() {
+  if (darkModeMediaQuery.matches) {
+    myImage.src = 'public/img/projets/album-typo-dark.jpg';
+  } else {
+    myImage.src = 'public/img/projets/album-typo-light.jpg';
+  }
+}
+
+toggleImageSrc();
+darkModeMediaQuery.addEventListener('change', toggleImageSrc);
+lightModeMediaQuery.addEventListener('change', toggleImageSrc);
+
+
+
+  // définir la hauteur maximale de la barre de progression
+  window.onload = () => {
+      // Ecouteur d'évènement sur scroll
+      window.addEventListener("scroll", () => {
+          // Calcul de la hauteur "utile" du document
+          let hauteur = document.documentElement.scrollHeight - window.innerHeight
+  
+          // Récupération de la position verticale
+          let position = window.scrollY
+  
+          // Récupération de la largeur de la fenêtre
+          let largeur = document.documentElement.clientWidth
+  
+          // Calcul de la largeur de la barre
+          let barre = position / hauteur * largeur
+  
+          // Modification du CSS de la barre
+          document.getElementById("progress").style.width = barre+"px"
+      })
+  }
+  
+  
+  /* Dark Mode */
+  function toggleDarkMode() {
+    var element = document.body;
+    element.classList.toggle("dark");
+  
+    var image = document.getElementById("mode-toggle");
+    if (element.classList.contains("dark")) {
+      image.src = "public/icon/icon_sun.svg";
+      image.alt = "public/icon/icon_moon.svg";
+    } else {
+      image.src = "public/icon/icon_moon.svg";
+      image.alt = "public/icon/icon_sun.svg";
+    }
+  }
+  window.addEventListener("load", function() {
+  var currentTheme = localStorage.getItem("theme");
+  var imageMobile = document.getElementById("mode-toggle");
+  var imageDesktop = document.getElementById("mode-toggle-desktop");
+  if (currentTheme === "dark") {
+    document.body.classList.add("dark");
+    imageMobile.src = "public/icon/icon_sun.svg";
+    imageMobile.alt = "public/icon/icon_moon.svg";
+    imageDesktop.src = "public/icon/icon_sun.svg";
+    imageDesktop.alt = "public/icon/icon_moon.svg";
+  } else {
+    imageMobile.src = "public/icon/icon_moon.svg";
+    imageMobile.alt = "public/icon/icon_sun.svg";
+    imageDesktop.src = "public/icon/icon_moon.svg";
+    imageDesktop.alt = "public/icon/icon_sun.svg";
+  }
+});
+
+  
+/* Dark Mode desktop  */
+function toggleDarkMode() {
+  var element = document.body;
+  element.classList.toggle("dark");
+
+  var image = document.getElementById("mode-toggle");
+  if (element.classList.contains("dark")) {
+    image.src = "public/icon/icon_sun.svg";
+    image.alt = "public/icon/icon_moon.svg";
+  } else {
+    image.src = "public/icon/icon_moon.svg";
+    image.alt = "public/icon/icon_sun.svg";
+  }
+}
+function toggleDarkMode() {
+  var element = document.body;
+  element.classList.toggle("dark");
+
+  // Si le thème sombre est activé, stocke-le dans le Local Storage
+  if (element.classList.contains("dark")) {
+    localStorage.setItem("theme", "dark");
+  }
+  // Sinon, stocke le thème par défaut (clair) dans le Local Storage
+  else {
+    localStorage.setItem("theme", "light");
+  }
+
+  /* Change l'icône du bouton en fonction du thème */
+  var imageMobile = document.getElementById("mode-toggle");
+  var imageDesktop = document.getElementById("mode-toggle-desktop");
+  if (element.classList.contains("dark")) {
+    imageMobile.src = "public/icon/icon_sun.svg";
+    imageMobile.alt = "public/icon/icon_moon.svg";
+    imageDesktop.src = "public/icon/icon_sun.svg";
+    imageDesktop.alt = "public/icon/icon_moon.svg";
+  }
+  else {
+    imageMobile.src = "public/icon/icon_moon.svg";
+    imageMobile.alt = "public/icon/icon_sun.svg";
+    imageDesktop.src = "public/icon/icon_moon.svg";
+    imageDesktop.alt = "public/icon/icon_sun.svg";
+  }
+}
+
+/* Récupère le thème actuel à partir du Local Storage */
+var currentTheme = localStorage.getItem("theme");
+
+/* Si le thème est défini sur "sombre", active le thème sombre */
+if (currentTheme === "dark") {
+  document.body.classList.add("dark");
+
+  /* Change l'icône du bouton en mode sombre */
+  var image = document.getElementById("mode-toggle");
+  image.src = "public/icon/icon_sun.svg";
+  image.alt = "public/icon/icon_moon.svg";
+}
+else {
+  /* Change l'icône du bouton en mode clair */
+  var image = document.getElementById("mode-toggle");
+  image.src = "public/icon/icon_moon.svg";
+  image.alt = "public/icon/icon_sun.svg";
+}
+
+/* Applique le thème sauvegardé lorsqu'une nouvelle page est chargée */
+window.addEventListener("load", function() {
+  var currentTheme = localStorage.getItem("theme");
+  if (currentTheme === "dark") {
+    document.body.classList.add("dark");
+
+    /* Change l'icône du bouton en mode sombre */
+    var image = document.getElementById("mode-toggle");
+    image.src = "public/icon/icon_sun.svg";
+    image.alt = "public/icon/icon_moon.svg";
+  }
+  else {
+    /* Change l'icône du bouton en mode clair */
+    var image = document.getElementById("mode-toggle");
+    image.src = "public/icon/icon_moon.svg";
+    image.alt = "public/icon/icon_sun.svg";
+  }
+});
+  
+  
+  /* Curseur */
+  const cursor = document.getElementById('cursor');
+  document.documentElement.addEventListener("mousemove", evt => {
+    cursor.style.display = 'inline-block';
+    cursor.style.left = `${evt.clientX - cursor.offsetWidth / 2}px`;
+    cursor.style.top = `${evt.clientY - cursor.offsetHeight / 2}px`;
+  });
+  
+  document.documentElement.addEventListener("mouseleave", evt => {
+    cursor.style.display = 'none';
+  });
+  
+  
+      // Wrap every letter in a span
+    var textWrapper = document.querySelector('  .text__animation__cascade .letters');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+    
+    anime.timeline({loop: true})
+      .add({
+        targets: '  .text__animation__cascade .letter',
+        translateY: ["1.1em", 0],
+        translateZ: 0,
+        duration: 750,
+        delay: (el, i) => 50 * i
+      }).add({
+        targets: '  .text__animation__cascade',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 1000
+      });
+  </script>

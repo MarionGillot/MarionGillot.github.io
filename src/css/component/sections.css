@@ -1,0 +1,74 @@
+/* Formulaire de contact */
+.section__grid {
+    margin-left: 3%;
+    margin-top: 12%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    z-index: 2;
+    align-items: center;
+    gap: 50%;
+}
+    /* Appliquer la mise en page en deux colonnes pour les résolutions d'écran larges */
+    @media (min-width: 768px) {
+        .section__grid {
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+        }
+    }
+
+    /* Appliquer la mise en page en une seule colonne pour les résolutions de téléphone */
+    @media (max-width: 768px) {
+        .section__grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+/* Page à propos */    
+.section__margin {
+    max-width: 40%;
+    margin: auto;
+}
+
+.section__center {
+    text-align: center;
+    margin: 10%;
+}
+
+    /* Appliquer la mise en page en une seule colonne pour les résolutions de téléphone */
+    @media (max-width: 768px) {
+        .section__margin {
+            max-width: 80%;
+        }
+    }
+
+.up {
+    margin-top: 6.5%;
+}
+
+/* Page conditions d'utilisations du site */
+.section__juridique {
+    margin: 20%;
+  }
+
+
+/* Page home */
+.section__grid__home {
+    margin-left: 3%;
+    margin-top: 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    z-index: -5;
+    align-content: center;
+}
+
+
+    /* Appliquer la mise en page en une seule colonne pour les résolutions de téléphone */
+    @media (max-width: 800px) {
+        .section__grid__home {
+            grid-template-columns: none;
+            margin-top: 25%;
+            z-index: -5;
+        }
+    }
+

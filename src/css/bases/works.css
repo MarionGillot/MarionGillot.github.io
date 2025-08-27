@@ -1,0 +1,131 @@
+/* Introduction des projets dans le hero */
+.content-description {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  margin: 10%;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .content-description {
+      display: flex;
+      flex-direction: column;
+  }
+  .mini-info {
+      order: 1;
+  }
+  .info {
+      order: 2;
+  }
+  .info {
+      display: block;
+      margin: 0;
+      text-align: left;
+  }
+}
+
+.mini-info {
+  grid-column: 1 / 2;
+  display: grid;
+  grid-template-columns: repeat(2, 20%);
+  grid-template-rows: auto;
+  gap: 5%;
+}
+
+.mini-info ul {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-bottom: 1em;
+}
+
+.mini-info li {
+  color: var(--impure-black);
+}
+
+.info {
+  grid-column: 2 / 3;
+}
+
+.info h2 {
+  color: var(--impure-black);
+}
+
+.no-line {
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+/* Disposition des éléments */
+.flex__text {
+  margin: 10%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);    
+  align-items: center;
+}
+
+@media (max-width: 790px) {
+  .flex__text {
+    grid-template-columns: 1fr ;
+  }
+}
+
+.flex__img_text {
+  margin: 5%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);    
+  gap: 10%;
+  align-items: center;
+}
+
+@media (max-width: 790px) {
+  .flex__img_text {
+    grid-template-columns: 1fr ;
+  }
+}
+
+.flex__img_text li {
+color: var(--impure-black);
+}
+
+.works__padding {
+  margin: 10%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20vw; 
+}
+
+@media (max-width: 790px) {
+  .works__padding {
+    margin: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10vw; 
+  }
+}
+
+/* Proposition d'autres projets en bas de page */
+.other {
+  margin-top: 10%;
+  margin-bottom: 10%;
+  margin-left: 10%;
+  margin-right: 10%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.other p {
+    white-space: normal;
+    text-overflow: ellipsis;
+    font-size: 14px;
+}
+
+.other__arrow {
+  display: flex;
+  gap: 6%;
+}
+
+.other__arrow p {
+  color: var(--impure-black);
+}

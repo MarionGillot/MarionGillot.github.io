@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en" x-data="{ menuIsOpen: false }" :class="menuIsOpen && 'noscroll'">
+
+<head>
+  <title>About me</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Marion Gillot, 2nd year student in MMi Multimedia and Internet" />
+  <meta name="keywords" content="portfolio, design, webdesigner, graphist, web">
+  
+  <link rel="shortcut icon" href="src/favicon.ico">
+  <link rel="stylesheet" href="src/css/style.css">
+  <link rel="stylesheet" type="text/css" href="src/scss/main.scss">
+  <link rel="stylesheet" type="text/css" href="src/scss/main.css">
+  <link src="src/js/index.js"></link>
+  <script defer="" src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
+</head>
+
+<body>
+
+  <header>
+    <div class="mobile-header" @scroll.window="atTop = ( window.scrollY > 100 ? false : true )" >
+
+      <div class="header__bar__mobile"> 
+        <button onclick="toggleDarkMode()">
+        <img class="header__logo__mode" id="mode-toggle" src="public/icon/icon_moon.svg" alt="icon dark mode">
+      </button>
+        
+        <button class="header__menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
+                @pointerdown="menuIsOpen = !menuIsOpen" 
+                :class="menuIsOpen && 'menu-btn--open'">
+          <span class="menu-btn__bar"></span>
+        </button>
+
+        <nav class="header__menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
+          <ul class="menu__list list-unstyled">
+            <li class="menu__item"><a class="menu__link" href="index-en.html">Projects</a></li>
+            <li class="menu__item"><a class="menu__link" href="apropos-en.html">About me</a></li>
+            
+            <select id="header__language__select">
+              <option><a href="apropos.html"></a>FR</option>
+              <option><a href="apropos-en.html"></a>EN</option>
+              <option><a href="apropos-es.html"></a>ESP</option>
+            </select>
+
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="desktop-header"  :class="{ 'header--atTop' : !atTop }">
+
+      <div class="header__start">
+  
+        <select id="header__language__select">
+          <option><a href="apropos.html"></a>FR</option>
+          <option><a href="apropos-en.html"></a>EN</option>
+          <option><a href="apropos-es.html"></a>ESP</option>
+        </select>
+  
+      <button onclick="toggleDarkMode()" class="mode-toggle-button">
+        <img class="header__logo__mode" id="mode-toggle-desktop" src="public/icon/icon_moon.svg" alt="icon dark mode">
+      </button>
+   
+      </div>
+  
+      <div class="header__end">
+  
+        <nav>
+          <ul class="navigation">
+            <li><a href="index-en.html">Projetcs</a></li>
+            <li><a href="apropos-en.html">About me</a></li>
+          </ul>
+        </nav>
+  
+      </div>
+    </div>
+      
+</header> 
+
+<main>
+  <div id="progress"></div>
+
+      <div class="hero__about">
+        <div class="headlines">
+          <h3 class="headline">About me.</h3>
+          <span class="ligne"></span>
+          </div>
+      </div>
+      
+      <span id="cursor">
+        <svg height="30" width="30">
+          <circle cx="15" cy="15" r="12" stroke-width="0" fill="#f7f8fa"/>
+        </svg>
+      </span>
+   
+      <div class="section__margin">
+
+        <div class="about__description">
+            <h3>Who am I ?</h3>
+            <p>My name is Marion Gillot, and I like the design. <span class="boldface">I am passionate about</span>,specializing in the creation of unique and aesthetic designs
+              My main objective is to <span class="boldface"> provide effective visual solutions</span> to help my clients achieve their marketing and communication objectives.</p>
+
+            <p class="up">Being in my second year of MMI (Multimedia and Internet), I have acquired experiences, and also thanks to my work experience in <span class="boldface"> video editing, document layout.</span> 
+              I have developed an expertise in branding <span class="boldface"> graphic design</span>, and <span class="boldface">web conception.</span></p>
+          
+              <p class="up"><span class="boldface">I am able to</span> to work on projects ranging from logos to websites to advertising campaigns 
+                packaging and branding.</p>
+
+            </div>
+
+
+        <h3>What I do</h3>
+
+        </div>
+            <div class="fade fade-delay-3 reval">
+              <div class="container__card">
+                <div class="card">
+                  <div class="content">
+                    <div class="card__img">
+                      <img src="public/icon/logo_figma.svg" alt="icon Figma">
+                    </div>
+                    <div class="card__title">
+                      <h3>The design of your project</h3>
+                    </div>
+                  </div>
+                  <div class="card__sci">
+                   <p class="card__text">I will realize your design for your projects, 
+                    in a responsive way while providing you with 
+                    you with regular updates on my progress.</p>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="content">
+                    <div class="card__img">
+                      <img src="public/icon/logo_photoshop.svg" alt="icon Adobe Photoshop">
+                    </div>
+                    <div class="card__title">
+                      <h3>Posters and Cards</h3>
+                    </div>
+                  </div>
+                  <div class="card__sci">
+                    <p class="card__text">Give me the opportunity to make your project dynamic,  
+                      by giving a boost to your graphic identity.</p>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="content">
+                    <div class="card__img">
+                      <img src="public/icon/logo_premiere.svg" alt="icon Adobe Première Pro">
+                    </div>
+                    <div class="card__title">
+                      <h3>Video editing</h3>
+                    </div>
+                  </div>
+                  <div class="card__sci">
+                    <p class="card__text">I can modernize your brand, by digitalizing it, 
+                      by bringing a creative and attractive touch to it!</p>
+                  </div>
+                </div>
+               <div class="card">
+                  <div class="content">
+                    <div class="card__img">
+                      <img src="public/icon/logo_indesign.svg" alt="icon Adobe Indesign">
+                    </div>
+                    <div class="card__title">
+                      <h3>Layout of documents</h3>
+                    </div>
+                  </div>
+                  <div class="card__sci">
+                    <p class="card__text">Let me add value to your product 
+                      by giving a boost to your graphic identity.</p>
+                  </div>
+                </div> 
+                <!-- <div class="card">
+                  <div class="content">
+                    <div class="card__img">
+                      <img src="public/icon/logo_photo.svg">
+                    </div>
+                    <div class="card__title">
+                      <h3>Réalisation de photos</h3>
+                    </div>
+                  </div>
+                  <div class="card__sci">
+                    <p class="card__text">N'attendez plus pour saisir l'instant présent et faire 
+                    de vos souvenirs des œuvres d'art !</p>
+                  </div>
+                </div> -->
+                <!-- <div class="card">
+                  <div class="content">
+                    <div class="card__img">
+                      <img src="public/icon/logo_wordpress.svg">
+                    </div>
+                    <div class="card__title">
+                      <h3>Intégration de CMS (WordPress)</h3>
+                    </div>
+                  </div>
+                  <div class="card__sci">
+                    <p class="card__text">Permettez-moi de mettre mes compétences en CMS Webflow à votre disposition pour créer un site web sur mesure.</p>
+                  </div>
+                </div> -->
+              </div>
+            </div>
+
+        <div class="section__margin">
+
+          <div class="fade fade-delay-3 reval">
+            <div class="about__anectodes">
+              <h3>3 Things to know about me</h3>
+                <div class="about__number">
+                  <h3 class="number">1</h3>
+                  <p>When I'm not behind my screen, I like to explore new design trends.</p>
+                </div>
+                <div class="about__number">
+                  <h3 class="number">2</h3>
+                  <p>My favorite colors are white and black.</p>
+                </div>
+                <div class="about__number">
+                  <h3 class="number">3</h3>
+                  <p>I am very perfectionist.</p>
+                </div>
+            </div>
+          </div>
+
+
+          <div class="fade fade-delay-3 reval">
+            <div class="about__contact">
+              <h3>Let's make an appointment!</h3>
+                <p>If you are looking for a passionate and talented designer to help take your brand or business to the next level, 
+                  please do not hesitate to contact me to discuss your projects. I look forward to working with you to<span class="boldface"> donner vie à vos idées et à vos visions.</span></p>
+    
+                  <div class="form__contact">
+                    <form class="form container" action="https://formspree.io/f/xoqzlypl" method="POST">
+                      <div class="form__input">
+                          <label for="lastname">Name
+                            <input type="text" id="lastname" name="last_name" placeholder="Enter your name">
+                          </label>
+                      </div>
+                  
+                      <div class="form__input">
+                        <label for="firstname">First name
+                          <input type="text" id="firstname" name="first_name" placeholder="Enter your first name">
+                        </label>
+                      </div>
+                  
+                      <div class="form__input">
+                        <label for="email">E-mail
+                          <input type="email" id="email" name="email" placeholder="Enter your e-mail address">
+                        </label>
+                      </div>
+                  
+                      <div class="form__input">
+                        <label for="message" >Message</label>
+                        <textarea id="message" name="message" class="form__input__message" placeholder="Write your message here..."></textarea>
+                      </div>
+                  
+                      <div class="button__contact">
+                        <button class="btn_contact" type="submit">SUBMIT</button>
+                      </div>
+                    </form>
+                  </div>
+                  
+            </div>
+          </div>   
+      </div>
+
+       
+
+
+  <footer class="footer">
+
+    <div class="footer__grid">
+    <div class="footer__contact">
+        <h4 class="footer__title">Marion Gillot</h4>
+        <p><a href="tel:0384542727">07 82 94 35 03</a></p>
+        <p><a href="mailto:mgillot.pro@gmail.com" target="_blank">mgillot.pro@gmail.com</a></p>
+    </div>
+  
+    <div class="footer__social">
+        <h4 class="footer__title">Follow me</h4>
+      <ul class="footer__list list-unstyled">
+        <li><a href="https://www.instagram.com/marion_gillot/" target="_blank" aria-label="instagram"><img src="public/icon/icon_insta.svg" alt="icone instagram"></a></li>
+        <li><a href="https://www.behance.net/tc_1820gillot" target="_blank" aria-label="behance"><img src="public/icon/icon_behance.svg" alt="icone behance"></a></li>
+        <li><a href="https://twitter.com/marion_082" target="_blank" aria-label="twitter"><img src="public/icon/icon_twitter.svg" alt="icone twitter"></a></li>
+        <li><a href="https://www.linkedin.com/in/marion-gillot-8133a7224/" target="_blank" aria-label="linkedin"><img src="public/icon/icon_linkedin.svg" alt="icone linkedin"></a></li>
+      </ul>
+    </div>
+    </div>
+  
+    <a href="conditions-en.html"><span class="footer__license">©mariongillot | All rights reserved.</span></a>
+        
+  </footer>
+
+
+    </main>
+</body> 
+
+
+<script>
+  window.addEventListener("load", function() {
+  var currentTheme = localStorage.getItem("theme");
+  var imageMobile = document.getElementById("mode-toggle");
+  var imageDesktop = document.getElementById("mode-toggle-desktop");
+  if (currentTheme === "dark") {
+    document.body.classList.add("dark");
+    imageMobile.src = "public/icon/icon_sun.svg";
+    imageMobile.alt = "public/icon/icon_moon.svg";
+    imageDesktop.src = "public/icon/icon_sun.svg";
+    imageDesktop.alt = "public/icon/icon_moon.svg";
+  } else {
+    imageMobile.src = "public/icon/icon_moon.svg";
+    imageMobile.alt = "public/icon/icon_sun.svg";
+    imageDesktop.src = "public/icon/icon_moon.svg";
+    imageDesktop.alt = "public/icon/icon_sun.svg";
+  }
+});
+
+/* Dark Mode desktop  */
+function toggleDarkMode() {
+  var element = document.body;
+  element.classList.toggle("dark");
+
+  var image = document.getElementById("mode-toggle");
+  if (element.classList.contains("dark")) {
+    image.src = "public/icon/icon_sun.svg";
+    image.alt = "public/icon/icon_moon.svg";
+  } else {
+    image.src = "public/icon/icon_moon.svg";
+    image.alt = "public/icon/icon_sun.svg";
+  }
+}
+function toggleDarkMode() {
+  var element = document.body;
+  element.classList.toggle("dark");
+
+  // Si le thème sombre est activé, stocke-le dans le Local Storage
+  if (element.classList.contains("dark")) {
+    localStorage.setItem("theme", "dark");
+  }
+  // Sinon, stocke le thème par défaut (clair) dans le Local Storage
+  else {
+    localStorage.setItem("theme", "light");
+  }
+
+  /* Change l'icône du bouton en fonction du thème */
+  var imageMobile = document.getElementById("mode-toggle");
+  var imageDesktop = document.getElementById("mode-toggle-desktop");
+  if (element.classList.contains("dark")) {
+    imageMobile.src = "public/icon/icon_sun.svg";
+    imageMobile.alt = "public/icon/icon_moon.svg";
+    imageDesktop.src = "public/icon/icon_sun.svg";
+    imageDesktop.alt = "public/icon/icon_moon.svg";
+  }
+  else {
+    imageMobile.src = "public/icon/icon_moon.svg";
+    imageMobile.alt = "public/icon/icon_sun.svg";
+    imageDesktop.src = "public/icon/icon_moon.svg";
+    imageDesktop.alt = "public/icon/icon_sun.svg";
+  }
+}
+
+/* Récupère le thème actuel à partir du Local Storage */
+var currentTheme = localStorage.getItem("theme");
+
+/* Si le thème est défini sur "sombre", active le thème sombre */
+if (currentTheme === "dark") {
+  document.body.classList.add("dark");
+
+  /* Change l'icône du bouton en mode sombre */
+  var image = document.getElementById("mode-toggle");
+  image.src = "public/icon/icon_sun.svg";
+  image.alt = "public/icon/icon_moon.svg";
+}
+else {
+  /* Change l'icône du bouton en mode clair */
+  var image = document.getElementById("mode-toggle");
+  image.src = "public/icon/icon_moon.svg";
+  image.alt = "public/icon/icon_sun.svg";
+}
+
+/* Applique le thème sauvegardé lorsqu'une nouvelle page est chargée */
+window.addEventListener("load", function() {
+  var currentTheme = localStorage.getItem("theme");
+  if (currentTheme === "dark") {
+    document.body.classList.add("dark");
+
+    /* Change l'icône du bouton en mode sombre */
+    var image = document.getElementById("mode-toggle");
+    image.src = "public/icon/icon_sun.svg";
+    image.alt = "public/icon/icon_moon.svg";
+  }
+  else {
+    /* Change l'icône du bouton en mode clair */
+    var image = document.getElementById("mode-toggle");
+    image.src = "public/icon/icon_moon.svg";
+    image.alt = "public/icon/icon_sun.svg";
+  }
+});
+
+
+
+
+
+
+
+
+
+window.addEventListener("scroll", reval);
+
+function reval() {
+  var revals = document.querySelectorAll(".reval");
+
+  for (var i = 0; i < revals.length; i++) {
+    var windowheight = window.innerHeight;
+    var revaltop = revals[i].getBoundingClientRect().top;
+    var revealpoint = 50;
+
+    if (revaltop < windowheight - revealpoint) {
+      revals[i].classList.add("active");
+    } else {
+      revals[i].classList.remove("active");
+    }
+  }
+}
+
+
+/* Champ de text message */
+const textarea = document.getElementById("message");
+textarea.addEventListener("input", function() {
+  this.style.height = "auto";
+  this.style.height = (this.scrollHeight) + "px";
+});
+
+
+
+// définir la hauteur maximale de la barre de progression
+window.onload = () => {
+    // Ecouteur d'évènement sur scroll
+    window.addEventListener("scroll", () => {
+        // Calcul de la hauteur "utile" du document
+        let hauteur = document.documentElement.scrollHeight - window.innerHeight
+
+        // Récupération de la position verticale
+        let position = window.scrollY
+
+        // Récupération de la largeur de la fenêtre
+        let largeur = document.documentElement.clientWidth
+
+        // Calcul de la largeur de la barre
+        let barre = position / hauteur * largeur
+
+        // Modification du CSS de la barre
+        document.getElementById("progress").style.width = barre+"px"
+    })
+}
+
+
+
+
+
+
+/* Curseur */
+const cursor = document.getElementById('cursor');
+document.documentElement.addEventListener("mousemove", evt => {
+  cursor.style.display = 'inline-block';
+  cursor.style.left = `${evt.clientX - cursor.offsetWidth / 2}px`;
+  cursor.style.top = `${evt.clientY - cursor.offsetHeight / 2}px`;
+});
+
+document.documentElement.addEventListener("mouseleave", evt => {
+  cursor.style.display = 'none';
+});
+
+
+
+
+
+</script>
+
+</html>
+
+

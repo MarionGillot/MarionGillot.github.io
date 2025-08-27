@@ -1,0 +1,99 @@
+/* DARK MODE */
+.dark {
+    background-color: var(--impure-black);
+    color: var(--impure-white);
+  }
+  .dark h1{color: var(--impure-white);}
+  .dark h2 {color: var(--impure-white);}
+  .dark h3 {color: var(--impure-white);}
+  .dark li {color: var(--impure-white);}
+  .dark label {color: var(--impure-white);}
+  .dark input {color: var(--impure-white);}
+  .dark .navigation a, li {color: var(--impure-white);}
+
+.dark .card__text {color: var(--impure-black);}
+
+.dark .btn_contact {
+    border: var(--impure-white);
+    color: var(--impure-black);
+    background: var(--impure-white);
+}
+
+.dark
+  .face-button .face-primary,
+  .face-button .face-secondary {
+    background-color: var(--impure-white);
+    color: var(--impure-black);
+    border: 1rem;
+    border: 1px solid  var(--impure-white);
+}
+
+.dark .form__input input {
+  border-bottom: 1px solid var(--impure-white);
+}
+
+.dark .form__input textarea {
+  border-bottom: 1px solid var(--impure-white);
+  color: var(--impure-white);
+}
+
+.dark .ligne {
+  background-color: var(--impure-white);
+}
+
+.dark .hero__home__text {
+  color: var(--impure-black);
+}
+
+.dark .container__card .card {
+  border: 1px  var(--impure-white);
+  background: var(--immpure-black);
+  box-shadow: 0 8px 12px var(--impure-white);
+  color: var(--impure-white);
+}
+
+.dark .container__card .card .content .card__title h3 {
+	color: var(--impure-white);
+}
+
+.dark .container__card p  {
+	color: var(--impure-white);
+}
+
+.dark .fa-arrow-down:before {
+  color: var(--impure-white);
+}
+
+.dark .juridique__title {
+  margin-bottom: 10%;
+  text-align: center;
+  color: var(--impure-white);
+}
+
+.dark .content-title {
+  color: var(--impure-black);
+}
+
+.dark .other__arrow p {
+  color: var(--impure-white);
+}
+
+.dark #header__language__select {
+  background-color: transparent;
+  color: var(--impure-white);
+  border: 0.5px solid var(--impure-white);
+}
+
+.dark .desktop-header {
+  background-color: var(--impure-black);
+}
+
+.dark #progress{
+  background-color: var(--impure-white);
+  height: 3px;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999; /* Peut être important si vous avez un menu en position fixe */
+}

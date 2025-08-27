@@ -1,0 +1,107 @@
+.menu {
+    visibility: hidden;
+    opacity: 0;
+    overflow: hidden;
+    position: fixed;
+    display: flex;
+    position: fixed;
+    top: 0; bottom: 0;
+    left: 0; right : 0;
+    background-color: var(--impure-white);
+    font-size: var(--h4);
+    transition: all .4s ease-in-out;
+  }
+
+.dark .menu {
+  background-color: var(--impure-black);
+}
+
+
+  .menu--open {
+    visibility: visible;
+    opacity: 1;
+    z-index: 3;
+  }
+  
+  .menu__list {
+    margin-top: 25vh;
+    margin-left: 15vw;
+  }
+  
+  .menu__item {
+    margin-top: 8%;
+    margin-bottom: 8%;
+}
+  
+  .menu__link {
+    color: var(--impure-black);
+    text-decoration: none;
+    font-size: 60px;
+    font-family: var(--font-bebas-neue);
+  }
+  
+  .dark .menu__link {
+    color: var(--impure-white);
+    text-decoration: none;
+    font-size: 60px;
+    font-family: var(--font-bebas-neue);
+  }
+  
+
+  /* Mise en forme du bouton de menu "Hamburger" */
+  .menu-btn {
+    position: relative;
+    z-index: 4;
+    width: 30px;  
+  
+  }
+  
+  .menu-btn__bar,
+  .menu-btn__bar::before,
+  .menu-btn__bar::after {
+    content: '';
+    background: var(--impure-black);
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    transition: all .4s ease-in-out;
+  }
+
+
+  .dark .menu-btn__bar {
+    content: '';
+    background: var(--impure-white);
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    transition: all .4s ease-in-out;
+  }
+  
+
+
+  .menu-btn__bar::before {
+    top: -10px;
+  }
+  
+  .menu-btn__bar::after {
+    top: 10px;
+
+  }
+  
+  /* Technique pour transformer les 3 barres du bouton de menu en croix */
+  .menu-btn--open .menu-btn__bar,
+  .menu-btn--open .menu-btn__bar::before,
+  .menu-btn--open .menu-btn__bar::after {
+    transform: rotate(135deg);
+  }
+  
+  .menu-btn--open .menu-btn__bar::before,
+  .menu-btn--open .menu-btn__bar::after {
+    transform: rotate(90deg);
+    top: 0;
+  }
+  

@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en" x-data="{ menuIsOpen: false }" :class="menuIsOpen && 'noscroll'">
+
+<head>
+  <title>Projects</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Marion Gillot, 2nd year student in MMi Multimedia and Internet" />
+  <meta name="keywords" content="portfolio, design, webdesigner, graphist, web">
+  
+  <link rel="shortcut icon" href="src/favicon.ico">
+  <link rel="stylesheet" href="src/css/style.css">
+  <link rel="stylesheet" type="text/css" href="src/scss/main.scss">
+  <link rel="stylesheet" type="text/css" href="src/scss/main.css">
+
+  <script defer="" src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
+</head>
+
+<body x-data="{ atTop: true }" >
+
+  <header>
+    <div class="mobile-header" @scroll.window="atTop = ( window.scrollY > 100 ? false : true )" >
+
+      <div class="header__bar__mobile"> 
+        <button onclick="toggleDarkMode()">
+        <img class="header__logo__mode" id="mode-toggle" src="public/icon/icon_moon.svg" alt="icon dark mode">
+      </button>
+        
+        <button class="header__menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
+                @pointerdown="menuIsOpen = !menuIsOpen" 
+                :class="menuIsOpen && 'menu-btn--open'">
+          <span class="menu-btn__bar"></span>
+        </button>
+
+        <nav class="header__menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
+          <ul class="menu__list list-unstyled">
+            <li class="menu__item"><a class="menu__link" href="index-en.html">Projects</a></li>
+            <li class="menu__item"><a class="menu__link" href="apropos-en.html">About me</a></li>
+            <select id="header__language__select">
+              <option value="french">FR</option>
+              <option value="english">EN</option>
+              <option value="spanish">ESP</option>
+            </select>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="desktop-header"  :class="{ 'header--atTop' : !atTop }">
+
+      <div class="header__start">
+  
+      <select id="header__language__select">
+        <option value="french">FR</option>
+        <option value="english">EN</option>
+        <option value="spanish">ESP</option>
+      </select>
+  
+      <button onclick="toggleDarkMode()" class="mode-toggle-button">
+        <img class="header__logo__mode" id="mode-toggle-desktop" src="public/icon/icon_moon.svg" alt="icon dark mode">
+      </button>
+   
+      </div>
+  
+      <div class="header__end">
+  
+        <nav>
+          <ul class="navigation">
+            <li><a href="index-en.html">Projects</a></li>
+            <li><a href="apropos-en.html">About me</a></li>
+          </ul>
+        </nav>
+  
+      </div>
+    </div>
+      
+</header> 
+
+
+<main>
+  <div id="progress"></div>
+
+  <span id="cursor">
+    <svg height="30" width="30">
+      <circle cx="15" cy="15" r="12" stroke-width="0" fill="#f7f8fa"/>
+    </svg>
+  </span>
+			
+
+      <div class="hero__home">
+          <div class="section__grid__home">
+                <div class="hero_up">
+                  <h1 class="hero__home__title">GRAPHIST<br> WEB/DESIGNER</h1>
+                  <p class="hero__details">[ Specialising in the creation of unique and innovative visual identity and web designs. ]</p></div>
+                  <div><img src="public/img/profil-home.jpg" class="profil__home" alt="profile picture of marion gillot"></div>
+                </div>
+
+              <div class="hero__home__down">
+                <div>
+                      <div class="arrow bounce">
+                        <div class="fa fa-arrow-down fa-2x"></div>
+                      </div>
+                      <p class="arrow__text">scroll</p>
+                </div>
+            
+                <div>
+                  <p class="hero__details">[ Located in France ]</p>
+                  <h2 class="hero__home__chapo">Marion Gillot</h2></div>
+                </div>
+          </div>
+      </div>
+    
+
+       <div class="headlines">
+             <h3 class="headline">Works.</h3>
+             <span class="ligne"></span>
+             <div id="filter">
+              <button class="filter-button" data-filter="all">All</button>
+              <button class="filter-button" data-filter="category1">Card</button>
+              <button class="filter-button" data-filter="category2">Poster</button>
+              <button class="filter-button" data-filter="category3">Drawing</button>
+            </div>
+      </div>
+
+      <div class="fade fade-delay-3 reval">
+      <div class="container__works">
+        <div class="grid__works">
+          <div class="item category1">
+            <div class="overlay-outer">
+            <a href="work-lumei-en.html">
+              <div class="overlay"></div>
+              <img src="public/img/projets/work_carte_visite.jpg" class="image" alt="projet de la carte de visite">
+              <div class="content-details fadeIn_bottom">
+                <h3 class="content-title">lumei</h3>
+            </div>
+            </a>
+          </div>
+          </div>
+
+          <div class="item category2">
+            <div class="overlay-outer">
+            <a href="work-album-en.html">
+              <div class="overlay"></div>
+              <img src="public/img/projets/work_album.jpg" class="image" alt="projet album">
+              <div class="content-details fadeIn_bottom">
+                <h3 class="content-title">Gamze Aydemir</h3>
+            </div>
+            </a>
+            </div>
+          </div>
+
+          <div class="item category3">
+            <div class="overlay-outer">
+            <a href="work-reve-en.html">
+              <div class="overlay"></div>
+              <img src="public/img/projets/work_reve.jpg" class="image" alt="projet reve">
+              <div class="content-details fadeIn_bottom">
+                <h3 class="content-title">Le rêve</h3>
+            </div>
+            </a>
+          </div>
+          </div>
+
+          <div class="item category1">
+            <div class="overlay-outer">
+            <a href="work-carte-en.html">
+              <div class="overlay"></div>
+              <img src="public/img/projets/work_carte.jpg" class="image" alt="projet carte postale">
+              <div class="content-details fadeIn_bottom">
+                <h3 class="content-title">Cassandre</h3>
+            </div>
+            </a>
+          </div>
+          </div>
+          
+          <div class="item category2">
+            <div class="overlay-outer">
+            <a href="work-expo-en.html">
+              <div class="overlay"></div>
+              <img src="public/img/projets/work_expo2025.jpg" class="image" alt="projet Exposition 2025">
+              <div class="content-details fadeIn_bottom">
+                <h3 class="content-title">Exposition universelle</h3>
+            </div>
+            </a>
+          </div>
+        </div>
+
+
+          <div class="item category2">
+            <div class="overlay-outer">
+              <a href="work-film-en.html"> 
+                <div class="overlay"></div>
+                <img src="public/img/projets/work_film.jpg" class="image" alt="projet The psychopath">
+                <div class="content-details fadeIn_bottom">
+                  <h3 class="content-title">The psychopath</h3>
+              </div>
+              </a>
+          </div>
+          </div>          
+        </div>
+  </div>
+</div>
+
+
+      <div class="section__center">
+        <h3>Download my portfolio in 1 click!</h3>
+          <div>
+              <a href="public/portfolio.pdf" download>
+                 <div class="face-button">
+
+                 <div class="face-primary">
+                  Download PDF
+                 </div>
+                
+                 <div class="face-secondary">
+                  Size : 52,3 Mo 
+                 </div>
+              </a>
+          </div>
+      </div>
+    </div>
+
+
+
+
+  <footer class="footer">
+
+        <div class="footer__grid">
+        <div class="footer__contact">
+            <h4 class="footer__title">Marion Gillot</h4>
+            <p><a href="tel:0384542727">07 82 94 35 03</a></p>
+            <p><a href="mailto:mgillot.pro@gmail.com" target="_blank">mgillot.pro@gmail.com</a></p>
+        </div>
+    
+        <div class="footer__social">
+            <h4 class="footer__title">Follow me</h4>
+          <ul class="footer__list list-unstyled">
+            <li><a href="https://www.instagram.com/marion_gillot/" target="_blank" aria-label="instagram"><img src="public/icon/icon_insta.svg" alt="icone instagram"></a></li>
+            <li><a href="https://www.behance.net/tc_1820gillot" target="_blank" aria-label="behance"><img src="public/icon/icon_behance.svg" alt="icone behance"></a></li>
+            <li><a href="https://twitter.com/marion_082" target="_blank" aria-label="twitter"><img src="public/icon/icon_twitter.svg" alt="icone twitter"></a></li>
+            <li><a href="https://www.linkedin.com/in/marion-gillot-8133a7224/" target="_blank" aria-label="linkedin"><img src="public/icon/icon_linkedin.svg" alt="icone linkedin"></a></li>
+          </ul>
+        </div>
+        </div>
+
+          <a href="conditions-en.html"><span class="footer__license">©mariongillot | All rights reserved.</span></a>
+        
+  </footer>
+
+
+    </main>
+</body>
+</html>
+
+
+
+<script>
+
+
+document.getElementById("header__language__select").addEventListener("change", function() {
+    var lang = this.value;
+    var url;
+    switch(lang) {
+      case "english":
+        url = "index-en.html";
+        break;
+      case "french":
+        url = "index.html";
+        break;
+      case "spanish":
+        url = "index-es.html";
+        break;
+    }
+    window.location.href = url;
+  });
+  
+
+window.addEventListener("load", function() {
+  var currentTheme = localStorage.getItem("theme");
+  var imageMobile = document.getElementById("mode-toggle");
+  var imageDesktop = document.getElementById("mode-toggle-desktop");
+  if (currentTheme === "dark") {
+    document.body.classList.add("dark");
+    imageMobile.src = "public/icon/icon_sun.svg";
+    imageMobile.alt = "public/icon/icon_moon.svg";
+    imageDesktop.src = "public/icon/icon_sun.svg";
+    imageDesktop.alt = "public/icon/icon_moon.svg";
+  } else {
+    imageMobile.src = "public/icon/icon_moon.svg";
+    imageMobile.alt = "public/icon/icon_sun.svg";
+    imageDesktop.src = "public/icon/icon_moon.svg";
+    imageDesktop.alt = "public/icon/icon_sun.svg";
+  }
+});
+
+window.addEventListener("scroll", reval);
+
+function reval() {
+  var revals = document.querySelectorAll(".reval");
+
+  for (var i = 0; i < revals.length; i++) {
+    var windowheight = window.innerHeight;
+    var revaltop = revals[i].getBoundingClientRect().top;
+    var revealpoint = 50;
+
+    if (revaltop < windowheight - revealpoint) {
+      revals[i].classList.add("active");
+    } else {
+      revals[i].classList.remove("active");
+    }
+  }
+}
+
+/* Filtrage */
+var filterButtons = document.querySelectorAll('.filter-button');
+
+filterButtons.forEach(function(button) {
+  button.addEventListener('click', function() {
+    var filterValue = button.getAttribute('data-filter');
+    var items = document.querySelectorAll('.item');
+
+    items.forEach(function(item) {
+      if (filterValue === 'all') {
+        item.classList.add('show');
+      } else {
+        item.classList.remove('show');
+        if (item.classList.contains(filterValue)) {
+          item.classList.add('show');
+        }
+      }
+    });
+  });
+});
+
+// ajouter la classe "show" à tous les éléments "item"
+document.querySelectorAll('.item').forEach(function(item) {
+  item.classList.add('show');
+});
+
+
+// définir la hauteur maximale de la barre de progression
+window.onload = () => {
+    // Ecouteur d'évènement sur scroll
+    window.addEventListener("scroll", () => {
+        // Calcul de la hauteur "utile" du document
+        let hauteur = document.documentElement.scrollHeight - window.innerHeight
+
+        // Récupération de la position verticale
+        let position = window.scrollY
+
+        // Récupération de la largeur de la fenêtre
+        let largeur = document.documentElement.clientWidth
+
+        // Calcul de la largeur de la barre
+        let barre = position / hauteur * largeur
+
+        // Modification du CSS de la barre
+        document.getElementById("progress").style.width = barre+"px"
+    })
+}
+
+
+/* Dark Mode desktop  */
+function toggleDarkMode() {
+  var element = document.body;
+  element.classList.toggle("dark");
+
+  var image = document.getElementById("mode-toggle");
+  if (element.classList.contains("dark")) {
+    image.src = "public/icon/icon_sun.svg";
+    image.alt = "public/icon/icon_moon.svg";
+  } else {
+    image.src = "public/icon/icon_moon.svg";
+    image.alt = "public/icon/icon_sun.svg";
+  }
+}
+function toggleDarkMode() {
+  var element = document.body;
+  element.classList.toggle("dark");
+
+  // Si le thème sombre est activé, stocke-le dans le Local Storage
+  if (element.classList.contains("dark")) {
+    localStorage.setItem("theme", "dark");
+  }
+  // Sinon, stocke le thème par défaut (clair) dans le Local Storage
+  else {
+    localStorage.setItem("theme", "light");
+  }
+
+  /* Change l'icône du bouton en fonction du thème */
+  var imageMobile = document.getElementById("mode-toggle");
+  var imageDesktop = document.getElementById("mode-toggle-desktop");
+  if (element.classList.contains("dark")) {
+    imageMobile.src = "public/icon/icon_sun.svg";
+    imageMobile.alt = "public/icon/icon_moon.svg";
+    imageDesktop.src = "public/icon/icon_sun.svg";
+    imageDesktop.alt = "public/icon/icon_moon.svg";
+  }
+  else {
+    imageMobile.src = "public/icon/icon_moon.svg";
+    imageMobile.alt = "public/icon/icon_sun.svg";
+    imageDesktop.src = "public/icon/icon_moon.svg";
+    imageDesktop.alt = "public/icon/icon_sun.svg";
+  }
+}
+
+/* Récupère le thème actuel à partir du Local Storage */
+var currentTheme = localStorage.getItem("theme");
+
+/* Si le thème est défini sur "sombre", active le thème sombre */
+if (currentTheme === "dark") {
+  document.body.classList.add("dark");
+
+  /* Change l'icône du bouton en mode sombre */
+  var image = document.getElementById("mode-toggle");
+  image.src = "public/icon/icon_sun.svg";
+  image.alt = "public/icon/icon_moon.svg";
+}
+else {
+  /* Change l'icône du bouton en mode clair */
+  var image = document.getElementById("mode-toggle");
+  image.src = "public/icon/icon_moon.svg";
+  image.alt = "public/icon/icon_sun.svg";
+}
+
+/* Applique le thème sauvegardé lorsqu'une nouvelle page est chargée */
+window.addEventListener("load", function() {
+  var currentTheme = localStorage.getItem("theme");
+  if (currentTheme === "dark") {
+    document.body.classList.add("dark");
+
+    /* Change l'icône du bouton en mode sombre */
+    var image = document.getElementById("mode-toggle");
+    image.src = "public/icon/icon_sun.svg";
+    image.alt = "public/icon/icon_moon.svg";
+  }
+  else {
+    /* Change l'icône du bouton en mode clair */
+    var image = document.getElementById("mode-toggle");
+    image.src = "public/icon/icon_moon.svg";
+    image.alt = "public/icon/icon_sun.svg";
+  }
+});
+
+
+
+
+
+
+/* Curseur */
+const cursor = document.getElementById('cursor');
+document.documentElement.addEventListener("mousemove", evt => {
+  cursor.style.display = 'inline-block';
+  cursor.style.left = `${evt.clientX - cursor.offsetWidth / 2}px`;
+  cursor.style.top = `${evt.clientY - cursor.offsetHeight / 2}px`;
+});
+
+document.documentElement.addEventListener("mouseleave", evt => {
+  cursor.style.display = 'none';
+});
+
+
+
+
+</script>
+
+
+
+

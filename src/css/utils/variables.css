@@ -1,0 +1,32 @@
+:root {
+/* Color styles */
+--impure-white: #F6F4ED;
+--impure-black: #0A0A0A;
+--gray: #595959;
+--gray-2: #E9E7DE;
+
+/* Text-size styles */
+--h1: 50px;
+--h2: 35px;
+--h3: 30px;
+--h4: 20px;
+--body: 15px;
+
+/* Effect styles */
+--shadow-black:  0px 0px 33px rgba(0, 0, 0, 0.25);
+--shadow-white:  0px 0px 29px rgba(255, 255, 255, 0.25);
+
+/* Police de caractère */
+--font-oxygen: 'Oxygen', sans-serif;
+--font-bebas-neue : 'Bebas Neue';
+
+/* Font variantes */
+--letter-spacing: 0.05em;
+
+/* Espaces */
+--space1x: 8px;
+--space2x: 16px;
+--space3x: 24px;
+--space4x: 48px;
+--space5x: 80px;
+}

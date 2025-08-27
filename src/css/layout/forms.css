@@ -1,0 +1,71 @@
+/* Formulaire */
+.form {
+    padding-bottom: 10%;
+    margin-top: var(--space4x);
+  }
+  
+  .form__input input, 
+  .form__select select {
+    -webkit-appearance: none;
+    appearance: none;
+    background: none;
+    border: none;
+    border-bottom: 1px solid var(--impure-black);
+    width: 100%;
+    padding: var(--space1x) 0;
+    color: var(--impure-black);
+  }
+  
+  .form__input input:focus,
+  .form__select select:focus {
+    outline: 0;
+  }
+  
+  .form textarea {
+    -webkit-appearance: none;
+    appearance: none;
+    background: none;
+    border: none;
+    border-bottom: 1px solid var(--impure-black);
+    width: 100%;
+    padding: var(--space1x) 0;
+    color: var(--impure-black);
+  }
+
+  .form__input__message {
+    min-height: 200px;
+    overflow: auto;
+  }
+
+  .form__input textarea:focus {
+    outline: none;
+
+  }
+  
+  .form label {
+    color: var(--impure-black);
+    margin-top: var(--space3x);
+    display: block;
+  }
+  
+.button__contact {
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+}
+
+/* Texte */
+.text__contact {
+  font-size: 3vw;
+  font-weight: 300;
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+
+  @media (min-width: 768px) {
+    .text__contact {
+      font-size: 1.5vw;
+      grid-template-columns: 1fr 1fr;
+      text-align: left;
+    }
+  }
