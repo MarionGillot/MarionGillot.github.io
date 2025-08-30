@@ -65,14 +65,13 @@
     margin-right: 2%;
   }
 
-  #header__language__select {
+  .header__language__select {
     background-color: transparent;
     color: var(--impure-black);
     padding: 0.5vh;
     border: 1px solid var(--impure-black);
     border-radius: 5px;
     font-size: 12px;
-    cursor: none;
   }
 
 /* Responsive du header */

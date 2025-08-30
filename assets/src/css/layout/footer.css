@@ -25,13 +25,13 @@
     filter: invert(60%);
   }
 
-.footer__license {
+  #footer__license {
   font-size: 10px;
   font-weight: 200;
   float: right;
 }
   
-  .footer__title {
+  #footer__title {
     color: #fff;
     margin-top: 0;
     text-transform: uppercase;
@@ -57,7 +57,7 @@
   }
 
   @media (max-width: 767px) {
-    .footer__license {
+    #footer__license {
       text-align: center;
     }
   }

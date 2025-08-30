@@ -1,337 +1,103 @@
-<!DOCTYPE html>
-<html lang="en" x-data="{ menuIsOpen: false }" :class="menuIsOpen && 'noscroll'">
+---
+layout: default
+title: Conditions of use
+lang: en
+---
 
-<head>
-  <title>Projects</title>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio of Marion Gillot, 2nd year student in MMi Multimedia and Internet" />
-  <meta name="keywords" content="portfolio, design, webdesigner, graphist, web">
-  
-  <link rel="shortcut icon" href="src/favicon.ico">
-  <link rel="stylesheet" href="src/css/style.css">
-  <link rel="stylesheet" type="text/css" href="src/scss/main.scss">
-  <link rel="stylesheet" type="text/css" href="src/scss/main.css">
+<div id="progress"></div>
 
-  <script defer="" src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
-</head>
-
-<body>
-
-  <header>
-    <div class="mobile-header" @scroll.window="atTop = ( window.scrollY > 100 ? false : true )" >
-
-      <div class="header__bar__mobile"> 
-        <button onclick="toggleDarkMode()">
-        <img class="header__logo__mode" id="mode-toggle" src="public/icon/icon_moon.svg" alt="icon dark mode">
-      </button>
-        
-        <button class="header__menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
-                @pointerdown="menuIsOpen = !menuIsOpen" 
-                :class="menuIsOpen && 'menu-btn--open'">
-          <span class="menu-btn__bar"></span>
-          
-        </button>
-
-        <nav class="header__menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
-          <ul class="menu__list list-unstyled">
-            <li class="menu__item"><a class="menu__link" href="index-en.html">Projects</a></li>
-            <li class="menu__item"><a class="menu__link" href="apropos-en.html">About me</a></li>
-            <select id="header__language__select">
-
-              <option value="english">EN</option>
-              <option value="french">FR</option>
-              <option value="spanish">ESP</option>
-            </select>
-          </ul>
-        </nav>
-      </div>
-    </div>
-
-    <div class="desktop-header"  :class="{ 'header--atTop' : !atTop }">
-
-      <div class="header__start">
-  
-      <select id="header__language__select">
-        <option value="french">FR</option>
-        <option value="english">EN</option>
-        <option value="spanish">ESP</option>
-      </select>
-  
-      <button onclick="toggleDarkMode()" class="mode-toggle-button">
-        <img class="header__logo__mode" id="mode-toggle-desktop" src="public/icon/icon_moon.svg" alt="icon dark mode">
-      </button>
-   
-      </div>
-  
-      <div class="header__end">
-  
-        <nav>
-          <ul class="navigation">
-            <li><a href="index-en.html">Projetcs</a></li>
-            <li><a href="apropos-en.html">About me</a></li>
-          </ul>
-        </nav>
-  
-      </div>
-    </div>
-      
-</header> 
+<div class="section__juridique">
 
 
-<span id="cursor">
-  <svg height="30" width="30">
-    <circle cx="15" cy="15" r="12" stroke-width="0" fill="#f7f8fa"/>
-  </svg>
-</span>
+    <h2 class="juridique__title">Conditions of use</h2>
 
-<main>
-
-  <div id="progress"></div>
-
-  <div class="section__juridique">
-
-
-  <h2 class="juridique__title">Conditions of use</h2>
-
-      <p>Welcome to my online Portfolio <span class="boldface">https://mariongillot.com/.</span> This site is operated by Marion Gillot. 
-        By accessing the Site, you agree to these terms of use. Please read them carefully before using the Site. 
+    <p>Welcome to my online Portfolio <span class="boldface">https://mariongillot.com/.</span> This site is operated by
+        Marion Gillot.
+        By accessing the Site, you agree to these terms of use. Please read them carefully before using the Site.
         If you do not agree with these conditions, you are not authorised to use the Site.
-      </p>
+    </p>
 
-  <h3 class="juridique__text">Content of the Site</h3>
-      <p>The content of the Site, including but not limited to text, graphics, images, photographs, illustrations, sound, video, features 
-          and other materials (collectively, the "Content"), is protected by copyright, trademark and other intellectual property 
-          laws on intellectual property rights. Except as authorized in writing by Marion Gillot, you may not reproduce, 
-          distribute, display, sell, publish, transmit or exploit in any way the Content.</p> <p>
- 
-          <h3 class="juridique__text">Using the Site</h3>
-          <p>You may use the Site only for lawful purposes. You may not use the Site in any manner that is unlawful or in any manner 
-              that could damage, disable, overburden or impair the Site or the networks connected to the Site. You may not attempt to gain 
-              unauthorised access to the Site or the computer systems connected to the Site. You may not use the Site to transmit 
-              spam or any other form of unsolicited communication. You may not use the Site to collect personal information 
-              You may not use the Site to collect personal information about other users of the Site.</p> <p>.
-    
-    
-      <h3 class="juridique__text">Intellectual Property</h3>
-          <p>All content presented on the Site, including, but not limited to, text, graphics, logos, images, sounds and other material, is protected by 
-              intellectual property laws and is the exclusive property of Marion Gillot or its licensors. Unless expressly authorized, 
-              you may not reproduce, publish, transmit, distribute, display, sell, license, create derivative works or use in any way any content of the Site. 
-              manner whatsoever any content of the Site without the prior written permission of Marion Gillot.</p>.
-    
-    
-      <h3 class="juridique__text">Prohibition of illegal use</h3>
-         <p>You may not use the Site in an illegal manner or in a way that violates the rights of Marion Gillot or any third party. 
-          It is strictly forbidden to use the projects, achievements and any other content presented on the Site without prior authorization from Marion Gillot. 
-          Any breach of this prohibition may lead to legal proceedings and damages.</p> <p>
-    
-    
-      <h3 class="juridique__text">Respect of copyright</h3>
-          <p>Marion Gillot respects copyright and expects its users to do the same. If you believe that your work has been copied onto 
-              the Site in such a way as to constitute copyright infringement, please inform us by providing the following information: a description 
-              of the copyrighted work you claim, a description of where the material is located on the Site, your address, telephone number 
-              and your e-mail address. We will take appropriate action if necessary.</p>.
-    
-    
-      <h3 class="juridique__text">Links to other sites</h3>
-          <p>The Site may contain links to other sites that are not operated by Marion Gillot. Marion Gillot 
-              has no control over these sites and cannot be held responsible for the content, privacy policies or practices of these sites. 
-              The inclusion of links to other sites does not constitute an endorsement of those sites.</p>
-      
-    
-      <h3 class="juridique__text">the privacy policies of those sites before using them.</h3>
-          <p>The Site may contain links to other sites that are not operated by Marion Gillot. Marion Gillot 
-          has no control over these sites and cannot be held responsible for the content, privacy policies or practices of these sites. 
-          The inclusion of links to other sites does not constitute an endorsement of those sites.</p>
-          
-    
-      <h3 class="juridique__text">Changes to Terms of Use</h3>
-          <p>Marion Gillot reserves the right to modify these terms of use at any time without notice. 
-              You are responsible for regularly reviewing the Terms of Use to take notice of any changes. 
-              Your continued use of the Site following the posting of any changes to the Terms of Use constitutes your acceptance of those changes.</p>
-         
-    
-      <h3 class="juridique__text">Termination</h3>
-          <p>Marion Gillot reserves the right to terminate your use of the Site at any time, without notice or liability. The provisions relating to 
-              intellectual property, user liability and legal use provisions shall survive termination.</p> <p>
-             
-            
-      <h3 class="juridique__text">Applicable Law</h3>
-          <p>These Terms of Use shall be governed by and construed in accordance with the laws of France. Any dispute arising from 
-            the use of the Site shall be subject to the courts of France.</p>
-    
-    </div>
+    <h3 class="juridique__text">Content of the Site</h3>
+    <p>The content of the Site, including but not limited to text, graphics, images, photographs, illustrations, sound,
+        video, features
+        and other materials (collectively, the "Content"), is protected by copyright, trademark and other intellectual
+        property
+        laws on intellectual property rights. Except as authorized in writing by Marion Gillot, you may not reproduce,
+        distribute, display, sell, publish, transmit or exploit in any way the Content.</p>
+    <p>
+
+    <h3 class="juridique__text">Using the Site</h3>
+    <p>You may use the Site only for lawful purposes. You may not use the Site in any manner that is unlawful or in any
+        manner
+        that could damage, disable, overburden or impair the Site or the networks connected to the Site. You may not
+        attempt to gain
+        unauthorised access to the Site or the computer systems connected to the Site. You may not use the Site to
+        transmit
+        spam or any other form of unsolicited communication. You may not use the Site to collect personal information
+        You may not use the Site to collect personal information about other users of the Site.</p>
+    <p>.
 
 
-
-<footer class="footer">
-
-  <div class="footer__grid">
-  <div class="footer__contact">
-      <h4 class="footer__title">Marion Gillot</h4>
-      <p><a href="tel:0384542727">07 82 94 35 03</a></p>
-      <p><a href="mailto:mgillot.pro@gmail.com" target="_blank">mgillot.pro@gmail.com</a></p>
-  </div>
-
-  <div class="footer__social">
-      <h4 class="footer__title">Follow me</h4>
-    <ul class="footer__list list-unstyled">
-      <li><a href="https://www.instagram.com/marion_gillot/" target="_blank" aria-label="instagram"><img src="public/icon/icon_insta.svg" alt="icone instagram"></a></li>
-      <li><a href="https://www.behance.net/tc_1820gillot" target="_blank" aria-label="behance"><img src="public/icon/icon_behance.svg" alt="icone behance"></a></li>
-      <li><a href="https://twitter.com/marion_082" target="_blank" aria-label="twitter"><img src="public/icon/icon_twitter.svg" alt="icone twitter"></a></li>
-      <li><a href="https://www.linkedin.com/in/marion-gillot-8133a7224/" target="_blank" aria-label="linkedin"><img src="public/icon/icon_linkedin.svg" alt="icone linkedin"></a></li>
-    </ul>
-  </div>
-  </div>
-
-  <a href="conditions-en.html"><span class="footer__license">©mariongillot | All rights reserved.</span></a>
-  
-</footer>
+    <h3 class="juridique__text">Intellectual Property</h3>
+    <p>All content presented on the Site, including, but not limited to, text, graphics, logos, images, sounds and other
+        material, is protected by
+        intellectual property laws and is the exclusive property of Marion Gillot or its licensors. Unless expressly
+        authorized,
+        you may not reproduce, publish, transmit, distribute, display, sell, license, create derivative works or use in
+        any way any content of the Site.
+        manner whatsoever any content of the Site without the prior written permission of Marion Gillot.</p>.
 
 
-      </main>
-</body> 
+    <h3 class="juridique__text">Prohibition of illegal use</h3>
+    <p>You may not use the Site in an illegal manner or in a way that violates the rights of Marion Gillot or any third
+        party.
+        It is strictly forbidden to use the projects, achievements and any other content presented on the Site without
+        prior authorization from Marion Gillot.
+        Any breach of this prohibition may lead to legal proceedings and damages.</p>
+    <p>
 
 
-<script>
-// définir la hauteur maximale de la barre de progression
-window.onload = () => {
-    // Ecouteur d'évènement sur scroll
-    window.addEventListener("scroll", () => {
-        // Calcul de la hauteur "utile" du document
-        let hauteur = document.documentElement.scrollHeight - window.innerHeight
-
-        // Récupération de la position verticale
-        let position = window.scrollY
-
-        // Récupération de la largeur de la fenêtre
-        let largeur = document.documentElement.clientWidth
-
-        // Calcul de la largeur de la barre
-        let barre = position / hauteur * largeur
-
-        // Modification du CSS de la barre
-        document.getElementById("progress").style.width = barre+"px"
-    })
-}
-
-window.addEventListener("load", function() {
-  var currentTheme = localStorage.getItem("theme");
-  var imageMobile = document.getElementById("mode-toggle");
-  var imageDesktop = document.getElementById("mode-toggle-desktop");
-  if (currentTheme === "dark") {
-    document.body.classList.add("dark");
-    imageMobile.src = "public/icon/icon_sun.svg";
-    imageMobile.alt = "public/icon/icon_moon.svg";
-    imageDesktop.src = "public/icon/icon_sun.svg";
-    imageDesktop.alt = "public/icon/icon_moon.svg";
-  } else {
-    imageMobile.src = "public/icon/icon_moon.svg";
-    imageMobile.alt = "public/icon/icon_sun.svg";
-    imageDesktop.src = "public/icon/icon_moon.svg";
-    imageDesktop.alt = "public/icon/icon_sun.svg";
-  }
-});
-
-/* Dark Mode desktop  */
-function toggleDarkMode() {
-  var element = document.body;
-  element.classList.toggle("dark");
-
-  var image = document.getElementById("mode-toggle");
-  if (element.classList.contains("dark")) {
-    image.src = "public/icon/icon_sun.svg";
-    image.alt = "public/icon/icon_moon.svg";
-  } else {
-    image.src = "public/icon/icon_moon.svg";
-    image.alt = "public/icon/icon_sun.svg";
-  }
-}
-function toggleDarkMode() {
-  var element = document.body;
-  element.classList.toggle("dark");
-
-  // Si le thème sombre est activé, stocke-le dans le Local Storage
-  if (element.classList.contains("dark")) {
-    localStorage.setItem("theme", "dark");
-  }
-  // Sinon, stocke le thème par défaut (clair) dans le Local Storage
-  else {
-    localStorage.setItem("theme", "light");
-  }
-
-  /* Change l'icône du bouton en fonction du thème */
-  var imageMobile = document.getElementById("mode-toggle");
-  var imageDesktop = document.getElementById("mode-toggle-desktop");
-  if (element.classList.contains("dark")) {
-    imageMobile.src = "public/icon/icon_sun.svg";
-    imageMobile.alt = "public/icon/icon_moon.svg";
-    imageDesktop.src = "public/icon/icon_sun.svg";
-    imageDesktop.alt = "public/icon/icon_moon.svg";
-  }
-  else {
-    imageMobile.src = "public/icon/icon_moon.svg";
-    imageMobile.alt = "public/icon/icon_sun.svg";
-    imageDesktop.src = "public/icon/icon_moon.svg";
-    imageDesktop.alt = "public/icon/icon_sun.svg";
-  }
-}
-
-/* Récupère le thème actuel à partir du Local Storage */
-var currentTheme = localStorage.getItem("theme");
-
-/* Si le thème est défini sur "sombre", active le thème sombre */
-if (currentTheme === "dark") {
-  document.body.classList.add("dark");
-
-  /* Change l'icône du bouton en mode sombre */
-  var image = document.getElementById("mode-toggle");
-  image.src = "public/icon/icon_sun.svg";
-  image.alt = "public/icon/icon_moon.svg";
-}
-else {
-  /* Change l'icône du bouton en mode clair */
-  var image = document.getElementById("mode-toggle");
-  image.src = "public/icon/icon_moon.svg";
-  image.alt = "public/icon/icon_sun.svg";
-}
-
-/* Applique le thème sauvegardé lorsqu'une nouvelle page est chargée */
-window.addEventListener("load", function() {
-  var currentTheme = localStorage.getItem("theme");
-  if (currentTheme === "dark") {
-    document.body.classList.add("dark");
-
-    /* Change l'icône du bouton en mode sombre */
-    var image = document.getElementById("mode-toggle");
-    image.src = "public/icon/icon_sun.svg";
-    image.alt = "public/icon/icon_moon.svg";
-  }
-  else {
-    /* Change l'icône du bouton en mode clair */
-    var image = document.getElementById("mode-toggle");
-    image.src = "public/icon/icon_moon.svg";
-    image.alt = "public/icon/icon_sun.svg";
-  }
-});
+    <h3 class="juridique__text">Respect of copyright</h3>
+    <p>Marion Gillot respects copyright and expects its users to do the same. If you believe that your work has been
+        copied onto
+        the Site in such a way as to constitute copyright infringement, please inform us by providing the following
+        information: a description
+        of the copyrighted work you claim, a description of where the material is located on the Site, your address,
+        telephone number
+        and your e-mail address. We will take appropriate action if necessary.</p>.
 
 
-/* Curseur */
-const cursor = document.getElementById('cursor');
-document.documentElement.addEventListener("mousemove", evt => {
-  cursor.style.display = 'inline-block';
-  cursor.style.left = `${evt.clientX - cursor.offsetWidth / 2}px`;
-  cursor.style.top = `${evt.clientY - cursor.offsetHeight / 2}px`;
-});
-
-document.documentElement.addEventListener("mouseleave", evt => {
-  cursor.style.display = 'none';
-});
+    <h3 class="juridique__text">Links to other sites</h3>
+    <p>The Site may contain links to other sites that are not operated by Marion Gillot. Marion Gillot
+        has no control over these sites and cannot be held responsible for the content, privacy policies or practices of
+        these sites.
+        The inclusion of links to other sites does not constitute an endorsement of those sites.</p>
 
 
-</script>
+    <h3 class="juridique__text">the privacy policies of those sites before using them.</h3>
+    <p>The Site may contain links to other sites that are not operated by Marion Gillot. Marion Gillot
+        has no control over these sites and cannot be held responsible for the content, privacy policies or practices of
+        these sites.
+        The inclusion of links to other sites does not constitute an endorsement of those sites.</p>
 
-</html>
+
+    <h3 class="juridique__text">Changes to Terms of Use</h3>
+    <p>Marion Gillot reserves the right to modify these terms of use at any time without notice.
+        You are responsible for regularly reviewing the Terms of Use to take notice of any changes.
+        Your continued use of the Site following the posting of any changes to the Terms of Use constitutes your
+        acceptance of those changes.</p>
 
 
+    <h3 class="juridique__text">Termination</h3>
+    <p>Marion Gillot reserves the right to terminate your use of the Site at any time, without notice or liability. The
+        provisions relating to
+        intellectual property, user liability and legal use provisions shall survive termination.</p>
+    <p>
+
+
+    <h3 class="juridique__text">Applicable Law</h3>
+    <p>These Terms of Use shall be governed by and construed in accordance with the laws of France. Any dispute arising
+        from
+        the use of the Site shall be subject to the courts of France.</p>
+
+</div>

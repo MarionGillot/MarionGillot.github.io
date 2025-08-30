@@ -1,0 +1,108 @@
+<header>
+  <div class="mobile-header" @scroll.window="atTop = ( window.scrollY > 100 ? false : true )">
+
+    <div class="header__bar__mobile">
+      <button onclick="toggleDarkMode()">
+        <img class="header__logo__mode" id="mode-toggle" src="assets/public/icon/icon_moon.svg" alt="logo du mode dark">
+      </button>
+
+      <button class="header__menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
+        @pointerdown="menuIsOpen = !menuIsOpen" :class="menuIsOpen && 'menu-btn--open'">
+        <span class="menu-btn__bar"></span>
+      </button>
+
+      <nav class="header__menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
+        <ul class="menu__list list-unstyled">
+          <li class="menu__item"><a class="menu__link" href="index.html">Projets</a></li>
+          <li class="menu__item"><a class="menu__link" href="apropos.html">À propos</a></li>
+          <select class="header__language__select">
+            <option value="french">FR</option>
+            <option value="english">EN</option>
+          </select>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <div class="desktop-header" :class="{ 'header--atTop' : !atTop }">
+
+    <div class="header__start">
+
+      <select class="header__language__select">
+        <option value="french">FR</option>
+        <option value="english">EN</option>
+      </select>
+
+      <button onclick="toggleDarkMode()" class="mode-toggle-button">
+        <img class="header__logo__mode" id="mode-toggle-desktop" src="assets/public/icon/icon_moon.svg"
+          alt="logo du mode dark">
+      </button>
+
+    </div>
+
+    <div class="header__end">
+
+      <nav>
+        <ul class="navigation">
+          <li><a href="index.html">Projets</a></li>
+          <li><a href="apropos.html">À propos</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </div>
+</header>
+
+<script type="module">
+  // Récupération langue de la page
+  const pageLanguage = location.pathname.includes('-en') ? 'english' : 'french';
+
+  // Récupération des select de choix de langue
+  const languageSelects = document.querySelectorAll('.header__language__select');
+  // Mise à jour de la langue dans les select
+  languageSelects.forEach(select => select.value = pageLanguage);
+
+  // Switch vers la même page dans la nouvelle langue si sélection
+  languageSelects.forEach(select => {
+    select.addEventListener('change', () => {
+      let file = location.pathname.split('/').pop() || 'index.html';
+
+      // Retrait de -en si présent
+      file = file.replace('-en', '');
+
+      if (select.value === 'english') {
+        // Ajout de -en si page en anglais
+        file = file.replace('.html', '-en.html');
+      }
+
+      location.href = file;
+    });
+  });
+
+  function updateHeaderLinksAndLabels() {
+    const links = document.querySelectorAll('.menu__link, .navigation a');
+
+    links.forEach(link => {
+      // 1. Mise à jour de l'adresse du lien
+      let href = link.getAttribute('href') || '';
+      // Retrait de -en si présent
+      href = href.replace('-en', '');
+      if (pageLanguage === 'english') {
+        // Ajout de -en si page en anglais
+        href = href.replace('.html', '-en.html');
+      }
+      link.setAttribute('href', href);
+
+      // 2. Mise à jour du label du lien
+      const destination = href.replace('-en', '').split('/').pop() || '';
+      if (destination.startsWith('index')) {
+        link.textContent = pageLanguage === 'english' ? 'Projects' : 'Projets';
+      } else if (destination.startsWith('apropos')) {
+        link.textContent = pageLanguage === 'english' ? 'About me' : 'À propos';
+      }
+    });
+  }
+
+  // Mise à jour des liens du menu
+  updateHeaderLinksAndLabels();
+</script>

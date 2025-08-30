@@ -1,0 +1,63 @@
+<footer class="footer">
+
+  <div class="footer__grid">
+    <div class="footer__contact">
+      <h4 class="footer__title">Marion Gillot</h4>
+      <p><a href="tel:0384542727">07 82 94 35 03</a></p>
+      <p><a href="mailto:mgillot.pro@gmail.com" target="_blank">mgillot.pro@gmail.com</a></p>
+    </div>
+
+    <div class="footer__social">
+      <h4 id="footer__title">Me suivre</h4>
+      <ul class="footer__list list-unstyled">
+        <li><a href="https://www.instagram.com/marion_gillot/" target="_blank" aria-label="instagram"><img
+              src="assets/public/icon/icon_insta.svg" alt="icone instagram"></a></li>
+        <li><a href="https://www.behance.net/tc_1820gillot" target="_blank" aria-label="behance"><img
+              src="assets/public/icon/icon_behance.svg" alt="icone behance"></a></li>
+        <li><a href="https://twitter.com/marion_082" target="_blank" aria-label="twitter"><img
+              src="assets/public/icon/icon_twitter.svg" alt="icone twitter"></a></li>
+        <li><a href="https://www.linkedin.com/in/marion-gillot-8133a7224/" target="_blank" aria-label="linkedin"><img
+              src="assets/public/icon/icon_linkedin.svg" alt="icone linkedin"></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <a id="footer__license__link" href="conditions.html"><span id="footer__license">©mariongillot | Tous droits réservés.</span></a>
+
+</footer>
+
+<script type="module">
+  // Récupération langue de la page
+  const pageLanguage = location.pathname.includes('-en') ? 'english' : 'french';
+
+  function updateFooterLinksAndLabels() {
+    // Mise à jour de "Me suivre"
+    const footerTitle = document.getElementById('footer__title');
+    if (footerTitle) {
+      footerTitle.textContent = pageLanguage === 'english' ? 'Follow me' : 'Me suivre';
+    }
+
+    // Mise à jour de "Tous droits réservés."
+    const footerLicense = document.getElementById('footer__license');
+    if (footerLicense) {
+      footerLicense.textContent = pageLanguage === 'english'
+        ? '©mariongillot | All rights reserved.'
+        : '©mariongillot | Tous droits réservés.';
+    }
+
+    // Mise à jour du lien vers les conditions
+    const conditionsLink = document.getElementById('footer__license__link');
+    if (conditionsLink) {
+      let href = conditionsLink.getAttribute('href');
+      // Retrait de -en si présent
+      href = href.replace('-en', '');
+      if (pageLanguage === 'english') {
+        // Ajout de -en si page en anglais
+        href = href.replace('.html', '-en.html');
+      }
+      conditionsLink.setAttribute('href', href);
+    }
+  }
+
+  updateFooterLinksAndLabels();
+</script>

@@ -1,337 +1,105 @@
-<!DOCTYPE html>
-<html lang="fr" x-data="{ menuIsOpen: false }" :class="menuIsOpen && 'noscroll'">
+---
+layout: default
+title: Conditions d'utilisations
+lang: fr
+---
 
-<head>
-  <title>Conditions d'utilisations</title>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio de Marion Gillot, étudiante en 2ème année en MMi Métier du Multimédia et de l'Internet" />
-  <meta name="keywords" content="portfolio, design, webdesigner, graphit, web">
-  
-  <link rel="shortcut icon" href="src/favicon.ico">
-  <link rel="stylesheet" href="src/css/style.css">
-  <link rel="stylesheet" type="text/css" href="src/scss/main.scss">
-  <link rel="stylesheet" type="text/css" href="src/scss/main.css">
-  <link src="src/js/index.js"></link>
-  <script defer="" src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
-</head>
+<div id="progress"></div>
 
-<body>
-
-  <header>
-    <div class="mobile-header" @scroll.window="atTop = ( window.scrollY > 100 ? false : true )" >
-
-      <div class="header__bar__mobile"> 
-        <button onclick="toggleDarkMode()">
-        <img class="header__logo__mode" id="mode-toggle" src="public/icon/icon_moon.svg" alt="logo du mode dark">
-      </button>
-        
-        <button class="header__menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
-                @pointerdown="menuIsOpen = !menuIsOpen" 
-                :class="menuIsOpen && 'menu-btn--open'">
-          <span class="menu-btn__bar"></span>
-        </button>
-
-        <nav class="header__menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
-          <ul class="menu__list list-unstyled">
-            <li class="menu__item"><a class="menu__link" href="index.html">Projets</a></li>
-            <li class="menu__item"><a class="menu__link" href="apropos.html">À propos</a></li>
-            <select id="header__language__select">
-
-              <option value="english">EN</option>
-              <option value="french">FR</option>
-              <option value="spanish">ESP</option>
-            </select>
-          </ul>
-        </nav>
-      </div>
-    </div>
-
-    <div class="desktop-header"  :class="{ 'header--atTop' : !atTop }">
-
-      <div class="header__start">
-  
-      <select id="header__language__select">
-        <option value="french">FR</option>
-        <option value="english">EN</option>
-        <option value="spanish">ESP</option>
-      </select>
-  
-      <button onclick="toggleDarkMode()" class="mode-toggle-button">
-        <img class="header__logo__mode" id="mode-toggle-desktop" src="public/icon/icon_moon.svg" alt="logo du mode dark">
-      </button>
-   
-      </div>
-  
-      <div class="header__end">
-  
-        <nav>
-          <ul class="navigation">
-            <li><a href="index.html">Projets</a></li>
-            <li><a href="apropos.html">À propos</a></li>
-          </ul>
-        </nav>
-  
-      </div>
-    </div>
-      
-</header> 
+<div class="section__juridique">
 
 
-<span id="cursor">
-  <svg height="30" width="30">
-    <circle cx="15" cy="15" r="12" stroke-width="0" fill="#f7f8fa"/>
-  </svg>
-</span>
+    <h2 class="juridique__title">Conditions d'utilisations</h2>
 
-<main>
+    <p>Bienvenue sur mon Portfolio en ligne <span class="boldface">https://mariongillot.com/.</span> Ce site est
+        exploité par Marion Gillot.
+        En accédant au Site, vous acceptez les présentes conditions d'utilisation. Veuillez les lire attentivement avant
+        d'utiliser le Site.
+        Si vous n'êtes pas d'accord avec ces conditions, vous n'êtes pas autorisé à utiliser le Site.
+    </p>
 
-  <div id="progress"></div>
-
-  <div class="section__juridique">
-
-
-  <h2 class="juridique__title">Conditions d'utilisations</h2>
-
-      <p>Bienvenue sur mon Portfolio en ligne <span class="boldface">https://mariongillot.com/.</span> Ce site est exploité par Marion Gillot. 
-          En accédant au Site, vous acceptez les présentes conditions d'utilisation. Veuillez les lire attentivement avant d'utiliser le Site. 
-          Si vous n'êtes pas d'accord avec ces conditions, vous n'êtes pas autorisé à utiliser le Site.
-      </p>
-
-  <h3 class="juridique__text">Contenu du site</h3>
-      <p>Le contenu du Site, y compris, sans s'y limiter, les textes, graphiques, images, photographies, illustrations, sons, vidéos, fonctionnalités 
-          et autres matériaux (collectivement appelés "le Contenu"), est protégé par les lois sur le droit d'auteur, les marques de commerce et autres 
-          lois sur les droits de propriété intellectuelle. Sauf autorisation écrite de Marion Gillot, vous n'êtes pas autorisé à reproduire, 
-          distribuer, afficher, vendre, publier, transmettre ou exploiter de quelque manière que ce soit le Contenu.</p>
+    <h3 class="juridique__text">Contenu du site</h3>
+    <p>Le contenu du Site, y compris, sans s'y limiter, les textes, graphiques, images, photographies, illustrations,
+        sons, vidéos, fonctionnalités
+        et autres matériaux (collectivement appelés "le Contenu"), est protégé par les lois sur le droit d'auteur, les
+        marques de commerce et autres
+        lois sur les droits de propriété intellectuelle. Sauf autorisation écrite de Marion Gillot, vous n'êtes pas
+        autorisé à reproduire,
+        distribuer, afficher, vendre, publier, transmettre ou exploiter de quelque manière que ce soit le Contenu.</p>
 
 
-  <h3 class="juridique__text">Utilisation du site</h3>
-      <p>Vous pouvez utiliser le Site uniquement à des fins légales. Vous ne pouvez pas utiliser le Site de manière illégale ou de toute autre manière 
-          qui pourrait endommager, désactiver, surcharger ou perturber le Site ou les réseaux connectés au Site. Vous ne pouvez pas tenter d'obtenir 
-          un accès non autorisé au Site ou aux systèmes informatiques connectés au Site. Vous ne pouvez pas utiliser le Site pour transmettre 
-          du spam ou toute autre forme de communication non sollicitée. Vous ne pouvez pas utiliser le Site pour collecter des informations personnelles 
-          sur d'autres utilisateurs du Site.</p>
+    <h3 class="juridique__text">Utilisation du site</h3>
+    <p>Vous pouvez utiliser le Site uniquement à des fins légales. Vous ne pouvez pas utiliser le Site de manière
+        illégale ou de toute autre manière
+        qui pourrait endommager, désactiver, surcharger ou perturber le Site ou les réseaux connectés au Site. Vous ne
+        pouvez pas tenter d'obtenir
+        un accès non autorisé au Site ou aux systèmes informatiques connectés au Site. Vous ne pouvez pas utiliser le
+        Site pour transmettre
+        du spam ou toute autre forme de communication non sollicitée. Vous ne pouvez pas utiliser le Site pour collecter
+        des informations personnelles
+        sur d'autres utilisateurs du Site.</p>
 
 
-  <h3 class="juridique__text">Propriété intellectuelle</h3>
-      <p>Tout le contenu présenté sur le Site, y compris, sans s'y limiter, les textes, graphiques, logos, images, sons et tout autre matériel, est protégé par 
-          les lois sur la propriété intellectuelle et est la propriété exclusive de Marion Gillot ou de ses concédants de licence. Sauf autorisation expresse, 
-          vous ne pouvez pas reproduire, publier, transmettre, distribuer, afficher, vendre, concéder des licences, créer des produits dérivés ou utiliser de quelque 
-          manière que ce soit tout contenu du Site sans l'autorisation écrite préalable de Marion Gillot.</p>
+    <h3 class="juridique__text">Propriété intellectuelle</h3>
+    <p>Tout le contenu présenté sur le Site, y compris, sans s'y limiter, les textes, graphiques, logos, images, sons et
+        tout autre matériel, est protégé par
+        les lois sur la propriété intellectuelle et est la propriété exclusive de Marion Gillot ou de ses concédants de
+        licence. Sauf autorisation expresse,
+        vous ne pouvez pas reproduire, publier, transmettre, distribuer, afficher, vendre, concéder des licences, créer
+        des produits dérivés ou utiliser de quelque
+        manière que ce soit tout contenu du Site sans l'autorisation écrite préalable de Marion Gillot.</p>
 
 
-  <h3 class="juridique__text">Interdiction d'utilisation illégale</h3>
-     <p>Vous ne pouvez pas utiliser le Site de manière illégale ou de manière à violer les droits de Marion Gillot ou de tout tiers. 
-      Il vous est strictement interdit de se servir des projets, réalisations, et tout autre contenu présenté sur le Site sans autorisation préalable de Marion Gillot. 
-      Tout manquement à cette interdiction peut entraîner des poursuites judiciaires et des dommages-intérêts.</p>
+    <h3 class="juridique__text">Interdiction d'utilisation illégale</h3>
+    <p>Vous ne pouvez pas utiliser le Site de manière illégale ou de manière à violer les droits de Marion Gillot ou de
+        tout tiers.
+        Il vous est strictement interdit de se servir des projets, réalisations, et tout autre contenu présenté sur le
+        Site sans autorisation préalable de Marion Gillot.
+        Tout manquement à cette interdiction peut entraîner des poursuites judiciaires et des dommages-intérêts.</p>
 
 
-  <h3 class="juridique__text">Respect des droits d'auteur</h3>
-      <p>Marion Gillot respecte les droits d'auteur et attend de ses utilisateurs qu'ils fassent de même. Si vous pensez que votre travail a été copié sur 
-          le Site de manière à constituer une infraction aux droits d'auteur, veuillez nous en informer en fournissant les informations suivantes : une description 
-          du travail protégé par le droit d'auteur que vous revendiquez, une description de l'emplacement du matériel sur le Site, votre adresse, votre numéro de téléphone 
-          et votre adresse e-mail. Nous prendrons les mesures appropriées si nécessaire.</p>
+    <h3 class="juridique__text">Respect des droits d'auteur</h3>
+    <p>Marion Gillot respecte les droits d'auteur et attend de ses utilisateurs qu'ils fassent de même. Si vous pensez
+        que votre travail a été copié sur
+        le Site de manière à constituer une infraction aux droits d'auteur, veuillez nous en informer en fournissant les
+        informations suivantes : une description
+        du travail protégé par le droit d'auteur que vous revendiquez, une description de l'emplacement du matériel sur
+        le Site, votre adresse, votre numéro de téléphone
+        et votre adresse e-mail. Nous prendrons les mesures appropriées si nécessaire.</p>
 
 
-  <h3 class="juridique__text">Liens vers d'autres sites</h3>
-      <p>Le Site peut contenir des liens vers d'autres sites qui ne sont pas exploités par Marion Gillot. Marion Gillot 
-          n'a aucun contrôle sur ces sites et ne peut être tenue responsable du contenu, des politiques de confidentialité ou des pratiques de ces sites. 
-          L'inclusion de liens vers d'autres sites ne constitue pas une approbation de ces sites.</p>
-  
+    <h3 class="juridique__text">Liens vers d'autres sites</h3>
+    <p>Le Site peut contenir des liens vers d'autres sites qui ne sont pas exploités par Marion Gillot. Marion Gillot
+        n'a aucun contrôle sur ces sites et ne peut être tenue responsable du contenu, des politiques de confidentialité
+        ou des pratiques de ces sites.
+        L'inclusion de liens vers d'autres sites ne constitue pas une approbation de ces sites.</p>
 
-  <h3 class="juridique__text">les politiques de confidentialité de ces sites avant de les utiliser.</h3>
-      <p>Le Site peut contenir des liens vers d'autres sites qui ne sont pas exploités par Marion Gillot. Marion Gillot 
-      n'a aucun contrôle sur ces sites et ne peut être tenue responsable du contenu, des politiques de confidentialité ou des pratiques de ces sites. 
-      L'inclusion de liens vers d'autres sites ne constitue pas une approbation de ces sites.</p>
-      
 
-  <h3 class="juridique__text">Modifications des conditions d'utilisation</h3>
-      <p>Marion Gillot se réserve le droit de modifier les présentes conditions d'utilisation à tout moment sans préavis. 
-          Vous êtes responsable de revoir régulièrement les conditions d'utilisation pour prendre connaissance de tout changement. 
-          Votre utilisation continue du Site après la publication de tout changement dans les conditions d'utilisation constitue votre acceptation de ces changements.</p>
-     
+    <h3 class="juridique__text">les politiques de confidentialité de ces sites avant de les utiliser.</h3>
+    <p>Le Site peut contenir des liens vers d'autres sites qui ne sont pas exploités par Marion Gillot. Marion Gillot
+        n'a aucun contrôle sur ces sites et ne peut être tenue responsable du contenu, des politiques de confidentialité
+        ou des pratiques de ces sites.
+        L'inclusion de liens vers d'autres sites ne constitue pas une approbation de ces sites.</p>
 
-  <h3 class="juridique__text">Résiliation</h3>
-      <p>Marion Gillot se réserve le droit de résilier votre utilisation du Site à tout moment, sans préavis et sans responsabilité. Les dispositions relatives 
-          à la propriété intellectuelle, à la responsabilité de l'utilisateur et à l'utilisation légale demeurent en vigueur après la résiliation.</p>
-         
-        
-  <h3 class="juridique__text">Loi applicable</h3>
-      <p>Les présentes conditions d'utilisation sont régies et interprétées conformément aux lois de France. Tout litige découlant de 
-          l'utilisation du Site sera soumis aux tribunaux de France.</p>
+
+    <h3 class="juridique__text">Modifications des conditions d'utilisation</h3>
+    <p>Marion Gillot se réserve le droit de modifier les présentes conditions d'utilisation à tout moment sans préavis.
+        Vous êtes responsable de revoir régulièrement les conditions d'utilisation pour prendre connaissance de tout
+        changement.
+        Votre utilisation continue du Site après la publication de tout changement dans les conditions d'utilisation
+        constitue votre acceptation de ces changements.</p>
+
+
+    <h3 class="juridique__text">Résiliation</h3>
+    <p>Marion Gillot se réserve le droit de résilier votre utilisation du Site à tout moment, sans préavis et sans
+        responsabilité. Les dispositions relatives
+        à la propriété intellectuelle, à la responsabilité de l'utilisateur et à l'utilisation légale demeurent en
+        vigueur après la résiliation.</p>
+
+
+    <h3 class="juridique__text">Loi applicable</h3>
+    <p>Les présentes conditions d'utilisation sont régies et interprétées conformément aux lois de France. Tout litige
+        découlant de
+        l'utilisation du Site sera soumis aux tribunaux de France.</p>
 
 </div>
-
-
-
-<footer class="footer">
-
-  <div class="footer__grid">
-  <div class="footer__contact">
-      <h4 class="footer__title">Marion Gillot</h4>
-      <p><a href="tel:0384542727">07 82 94 35 03</a></p>
-      <p><a href="mailto:mgillot.pro@gmail.com" target="_blank">mgillot.pro@gmail.com</a></p>
-  </div>
-
-  <div class="footer__social">
-      <h4 class="footer__title">Me suivre</h4>
-    <ul class="footer__list list-unstyled">
-      <li><a href="https://www.instagram.com/marion_gillot/" target="_blank" aria-label="instagram"><img src="public/icon/icon_insta.svg" alt="icone instagram"></a></li>
-      <li><a href="https://www.behance.net/tc_1820gillot" target="_blank" aria-label="behance"><img src="public/icon/icon_behance.svg" alt="icone behance"></a></li>
-      <li><a href="https://twitter.com/marion_082" target="_blank" aria-label="twitter"><img src="public/icon/icon_twitter.svg" alt="icone twitter"></a></li>
-      <li><a href="https://www.linkedin.com/in/marion-gillot-8133a7224/" target="_blank" aria-label="linkedin"><img src="public/icon/icon_linkedin.svg" alt="icone linkedin"></a></li>
-    </ul>
-  </div>
-  </div>
-
-  <a href="conditions.html"><span class="footer__license">©mariongillot | Tous droits réservés.</span></a>
-  
-</footer>
-
-
-      </main>
-</body> 
-
-
-<script>
-// définir la hauteur maximale de la barre de progression
-window.onload = () => {
-    // Ecouteur d'évènement sur scroll
-    window.addEventListener("scroll", () => {
-        // Calcul de la hauteur "utile" du document
-        let hauteur = document.documentElement.scrollHeight - window.innerHeight
-
-        // Récupération de la position verticale
-        let position = window.scrollY
-
-        // Récupération de la largeur de la fenêtre
-        let largeur = document.documentElement.clientWidth
-
-        // Calcul de la largeur de la barre
-        let barre = position / hauteur * largeur
-
-        // Modification du CSS de la barre
-        document.getElementById("progress").style.width = barre+"px"
-    })
-}
-
-window.addEventListener("load", function() {
-  var currentTheme = localStorage.getItem("theme");
-  var imageMobile = document.getElementById("mode-toggle");
-  var imageDesktop = document.getElementById("mode-toggle-desktop");
-  if (currentTheme === "dark") {
-    document.body.classList.add("dark");
-    imageMobile.src = "public/icon/icon_sun.svg";
-    imageMobile.alt = "public/icon/icon_moon.svg";
-    imageDesktop.src = "public/icon/icon_sun.svg";
-    imageDesktop.alt = "public/icon/icon_moon.svg";
-  } else {
-    imageMobile.src = "public/icon/icon_moon.svg";
-    imageMobile.alt = "public/icon/icon_sun.svg";
-    imageDesktop.src = "public/icon/icon_moon.svg";
-    imageDesktop.alt = "public/icon/icon_sun.svg";
-  }
-});
-
-/* Dark Mode desktop  */
-function toggleDarkMode() {
-  var element = document.body;
-  element.classList.toggle("dark");
-
-  var image = document.getElementById("mode-toggle");
-  if (element.classList.contains("dark")) {
-    image.src = "public/icon/icon_sun.svg";
-    image.alt = "public/icon/icon_moon.svg";
-  } else {
-    image.src = "public/icon/icon_moon.svg";
-    image.alt = "public/icon/icon_sun.svg";
-  }
-}
-function toggleDarkMode() {
-  var element = document.body;
-  element.classList.toggle("dark");
-
-  // Si le thème sombre est activé, stocke-le dans le Local Storage
-  if (element.classList.contains("dark")) {
-    localStorage.setItem("theme", "dark");
-  }
-  // Sinon, stocke le thème par défaut (clair) dans le Local Storage
-  else {
-    localStorage.setItem("theme", "light");
-  }
-
-  /* Change l'icône du bouton en fonction du thème */
-  var imageMobile = document.getElementById("mode-toggle");
-  var imageDesktop = document.getElementById("mode-toggle-desktop");
-  if (element.classList.contains("dark")) {
-    imageMobile.src = "public/icon/icon_sun.svg";
-    imageMobile.alt = "public/icon/icon_moon.svg";
-    imageDesktop.src = "public/icon/icon_sun.svg";
-    imageDesktop.alt = "public/icon/icon_moon.svg";
-  }
-  else {
-    imageMobile.src = "public/icon/icon_moon.svg";
-    imageMobile.alt = "public/icon/icon_sun.svg";
-    imageDesktop.src = "public/icon/icon_moon.svg";
-    imageDesktop.alt = "public/icon/icon_sun.svg";
-  }
-}
-
-/* Récupère le thème actuel à partir du Local Storage */
-var currentTheme = localStorage.getItem("theme");
-
-/* Si le thème est défini sur "sombre", active le thème sombre */
-if (currentTheme === "dark") {
-  document.body.classList.add("dark");
-
-  /* Change l'icône du bouton en mode sombre */
-  var image = document.getElementById("mode-toggle");
-  image.src = "public/icon/icon_sun.svg";
-  image.alt = "public/icon/icon_moon.svg";
-}
-else {
-  /* Change l'icône du bouton en mode clair */
-  var image = document.getElementById("mode-toggle");
-  image.src = "public/icon/icon_moon.svg";
-  image.alt = "public/icon/icon_sun.svg";
-}
-
-/* Applique le thème sauvegardé lorsqu'une nouvelle page est chargée */
-window.addEventListener("load", function() {
-  var currentTheme = localStorage.getItem("theme");
-  if (currentTheme === "dark") {
-    document.body.classList.add("dark");
-
-    /* Change l'icône du bouton en mode sombre */
-    var image = document.getElementById("mode-toggle");
-    image.src = "public/icon/icon_sun.svg";
-    image.alt = "public/icon/icon_moon.svg";
-  }
-  else {
-    /* Change l'icône du bouton en mode clair */
-    var image = document.getElementById("mode-toggle");
-    image.src = "public/icon/icon_moon.svg";
-    image.alt = "public/icon/icon_sun.svg";
-  }
-});
-
-
-/* Curseur */
-const cursor = document.getElementById('cursor');
-document.documentElement.addEventListener("mousemove", evt => {
-  cursor.style.display = 'inline-block';
-  cursor.style.left = `${evt.clientX - cursor.offsetWidth / 2}px`;
-  cursor.style.top = `${evt.clientY - cursor.offsetHeight / 2}px`;
-});
-
-document.documentElement.addEventListener("mouseleave", evt => {
-  cursor.style.display = 'none';
-});
-
-
-</script>
-
-</html>
-
-

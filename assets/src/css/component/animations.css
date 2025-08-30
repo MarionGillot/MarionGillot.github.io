@@ -33,35 +33,6 @@
   --cursorY: 0;
 }
 
-@media (min-width: 768px) {
-  #cursor {
-    pointer-events: none;
-    display: none;
-    position: fixed;
-    top: var(--cursorX);
-    left: var(--cursorY);
-    z-index: 1000;
-    z-index: 1000;
-    transform: translate(0%, 0%) translate(0, 0%);
-    mix-blend-mode: difference;
-    transition-timing-function: ease-in-out;
-    }
-  
-  
-  #cursor svg {
-    height: 60px;
-    width: 60px;
-  }
-  
-  #cursor svg circle {
-    cx: 30;
-    cy: 30;
-    r: 20;
-    stroke-width: 0;
-    fill: var(--impure-white);
-  }
-}
-
 /* Barre de progression au scoll */
 #progress{
   background-color: var(--impure-black);

@@ -1,136 +1,66 @@
-<!DOCTYPE html>
-<html lang="fr" x-data="{ menuIsOpen: false }" :class="menuIsOpen && 'noscroll'">
+---
+layout: default
+title: Carte postale Cassandre
+lang: fr
+---
 
-<head>
-    <title>Carte postale Cassandre</title>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio de Marion Gillot, étudiante en 2ème année en MMi Métier du Multimédia et de l'Internet" />
-    <meta name="keywords" content="portfolio, design, webdesigner, graphit, web">
-    
-    <link rel="shortcut icon" href="src/favicon.ico">
-    <link rel="stylesheet" href="src/css/style.css">
-    <link rel="stylesheet" type="text/css" href="src/scss/main.scss">
-    <link rel="stylesheet" type="text/css" href="src/scss/main.css">
-    <link src="src/js/index.js"></link>
-    <script defer="" src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
-</head>
-
-<body x-data="{ atTop: true }" >
-
-  <header>
-    <div class="mobile-header" @scroll.window="atTop = ( window.scrollY > 100 ? false : true )" >
-
-      <div class="header__bar__mobile"> 
-        <button onclick="toggleDarkMode()">
-        <img class="header__logo__mode" id="mode-toggle" src="public/icon/icon_moon.svg" alt="logo du mode dark">
-      </button>
-        
-        <button class="header__menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
-                @pointerdown="menuIsOpen = !menuIsOpen" 
-                :class="menuIsOpen && 'menu-btn--open'">
-          <span class="menu-btn__bar"></span>
-        </button>
-
-        <nav class="header__menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
-          <ul class="menu__list list-unstyled">
-            <li class="menu__item"><a class="menu__link" href="index.html">Projets</a></li>
-            <li class="menu__item"><a class="menu__link" href="apropos.html">À propos</a></li>
-            <select id="header__language__select">
-
-              <option value="english">EN</option>
-              <option value="french">FR</option>
-              <option value="spanish">ESP</option>
-            </select>
-          </ul>
-        </nav>
-      </div>
-    </div>
-
-    <div class="desktop-header"  :class="{ 'header--atTop' : !atTop }">
-
-      <div class="header__start">
-  
-      <select id="header__language__select">
-        <option value="french">FR</option>
-        <option value="english">EN</option>
-        <option value="spanish">ESP</option>
-      </select>
-  
-      <button onclick="toggleDarkMode()" class="mode-toggle-button">
-        <img class="header__logo__mode" id="mode-toggle-desktop" src="public/icon/icon_moon.svg" alt="logo du mode dark">
-      </button>
-   
-      </div>
-  
-      <div class="header__end">
-  
-        <nav>
-          <ul class="navigation">
-            <li><a href="index.html">Projets</a></li>
-            <li><a href="apropos.html">À propos</a></li>
-          </ul>
-        </nav>
-  
-      </div>
-    </div>
-      
-</header> 
+<div id="progress"></div>
 
 
-<main>
-  <div id="progress"></div>
 
-  <span id="cursor">
-    <svg height="30" width="30">
-      <circle cx="15" cy="15" r="12" stroke-width="0" fill="#f7f8fa"/>
-    </svg>
-  </span>
+<div class="content-description">
+  <div class="mini-info">
+    <ul>
+      <li>
+        <h3 class="no-line">Année</h3>
+        <p>2022</p>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <h3 class="no-line">Logiciel</h3>
+        <p>Illustrator</p>
+      </li>
+    </ul>
+  </div>
 
-
-			
-    <div class="content-description">
-      <div class="mini-info">
-              <ul>
-                  <li><h3 class="no-line">Année</h3>
-                  <p>2022</p></li>
-              </ul>
-              <ul>
-                  <li><h3 class="no-line">Logiciel</h3>
-                    <p>Illustrator</p>
-                  </li>
-              </ul>
-          </div>
-
-          <div class="info">
-              <h2>Carte postale Cassandre</h2>
-              <p>Création d'une carte postale sur le thème de Cassandre alias, Adolphe Jean-Marie Mouron, en utilisant ses aspects graphiques 
-                et ses méthodes de dessin. Œuvre inspirée : VIN TONIQUE DUBONNET AVEC QUIQUENA</p>
-        </div>
-    </div> 
+  <div class="info">
+    <h2>Carte postale Cassandre</h2>
+    <p>Création d'une carte postale sur le thème de Cassandre alias, Adolphe Jean-Marie Mouron, en utilisant ses aspects
+      graphiques
+      et ses méthodes de dessin. Œuvre inspirée : VIN TONIQUE DUBONNET AVEC QUIQUENA</p>
+  </div>
+</div>
 
 
-    <img src="public/img/projets/carte-carte-postale.jpg" alt="Carte postale à la façon de Cassandre">
+<img src="assets/public/img/projets/carte-carte-postale.jpg" alt="Carte postale à la façon de Cassandre">
 
-    <div class="flex__text">
-      <div><h3>L'objectif</h3></div>
-      <div><p>L'objectif de ce projet était de créer une carte postale en s'appuyant sur les méthodes et les techniques utilisées de l'artiste Cassandre.
-        Cassandre alias, Adolphe Jean-Marie Mouron, qui est un graphiste, typographe, affichiste, décorateur de théâtre, lithographe et peintre français de l’entre-deux guerres.
-      </p></div>
-    </div>
+<div class="flex__text">
+  <div>
+    <h3>L'objectif</h3>
+  </div>
+  <div>
+    <p>L'objectif de ce projet était de créer une carte postale en s'appuyant sur les méthodes et les techniques
+      utilisées de l'artiste Cassandre.
+      Cassandre alias, Adolphe Jean-Marie Mouron, qui est un graphiste, typographe, affichiste, décorateur de théâtre,
+      lithographe et peintre français de l’entre-deux guerres.
+    </p>
+  </div>
+</div>
 
-    <div class="flex__img_text">
-      <div>
-        <p>En détourant le sujet de l'affiche 'Dubonnet VIN TONIQUE DUBONNET AVEC QUIQUENA' avec Adobe illustrator, j'ai alors mit ce contenu en noir pour le mettre en valeur : 
-          En contrast avec le fond de la carte postale, représentant la plage, en Espagne. Ceci serait une carte postale pour les vacanciers, ceux qui visitent la ville,
-        ceux qui aiment l'artiste. </p>
-      </div>
+<div class="flex__img_text">
+  <div>
+    <p>En détourant le sujet de l'affiche 'Dubonnet VIN TONIQUE DUBONNET AVEC QUIQUENA' avec Adobe illustrator, j'ai
+      alors mit ce contenu en noir pour le mettre en valeur :
+      En contrast avec le fond de la carte postale, représentant la plage, en Espagne. Ceci serait une carte postale
+      pour les vacanciers, ceux qui visitent la ville,
+      ceux qui aiment l'artiste. </p>
+  </div>
 
-        <div>
-          <img src="public/img/projets/carte-illustration-2.jpg" alt="affiche">
-        </div>
-    </div>
+  <div>
+    <img src="assets/public/img/projets/carte-illustration-2.jpg" alt="affiche">
+  </div>
+</div>
 
 
 
@@ -141,230 +71,23 @@
 </div>
 
 <div class="flex__img">
-  <div><img src="public/img/projets/carte-affiche.jpg" alt="carte postale avant et arrière">
+  <div><img src="assets/public/img/projets/carte-affiche.jpg" alt="carte postale avant et arrière">
   </div>
-  <div><img src="public/img/projets/carte-dubonnet.jpg" alt="oeuvre de cassandre : inspirations"></div>
+  <div><img src="assets/public/img/projets/carte-dubonnet.jpg" alt="oeuvre de cassandre : inspirations"></div>
 </div>
 
 <div class="other">
   <div class="other__arrow">
     <a href="work-reve.html">
-      <img src="public/icon/icon_arrow-back.svg" alt="icône de flèche : projet précèdent">
+      <img src="assets/public/icon/icon_arrow-back.svg" alt="icône de flèche : projet précèdent">
       <p>Projet précèdent</p>
     </a>
   </div>
- 
+
   <div class="other__arrow">
     <a href="work-expo.html">
-      <img src="public/icon/icon_arrow-after.svg" alt="icône de flèche : projet suivant">
+      <img src="assets/public/icon/icon_arrow-after.svg" alt="icône de flèche : projet suivant">
       <p>Projet suivant</p>
     </a>
   </div>
 </div>
-
-
-
-
-<footer class="footer">
-
-  <div class="footer__grid">
-  <div class="footer__contact">
-      <h4 class="footer__title">Marion Gillot</h4>
-      <p><a href="tel:0384542727">07 82 94 35 03</a></p>
-      <p><a href="mailto:mgillot.pro@gmail.com" target="_blank">mgillot.pro@gmail.com</a></p>
-  </div>
-
-  <div class="footer__social">
-      <h4 class="footer__title">Me suivre</h4>
-    <ul class="footer__list list-unstyled">
-      <li><a href="https://www.instagram.com/marion_gillot/" target="_blank" aria-label="instagram"><img src="public/icon/icon_insta.svg" alt="icone instagram"></a></li>
-      <li><a href="https://www.behance.net/tc_1820gillot" target="_blank" aria-label="behance"><img src="public/icon/icon_behance.svg" alt="icone behance"></a></li>
-      <li><a href="https://twitter.com/marion_082" target="_blank" aria-label="twitter"><img src="public/icon/icon_twitter.svg" alt="icone twitter"></a></li>
-      <li><a href="https://www.linkedin.com/in/marion-gillot-8133a7224/" target="_blank" aria-label="linkedin"><img src="public/icon/icon_linkedin.svg" alt="icone linkedin"></a></li>
-    </ul>
-  </div>
-  </div>
-
-    <a href="conditions.html"><span class="footer__license">©mariongillot | Tous droits réservés.</span></a>
-  
-</footer>
-
-
-
-
-    </main>
-</body>
-</html>
-
-<script>
-
-  // définir la hauteur maximale de la barre de progression
-  window.onload = () => {
-      // Ecouteur d'évènement sur scroll
-      window.addEventListener("scroll", () => {
-          // Calcul de la hauteur "utile" du document
-          let hauteur = document.documentElement.scrollHeight - window.innerHeight
-  
-          // Récupération de la position verticale
-          let position = window.scrollY
-  
-          // Récupération de la largeur de la fenêtre
-          let largeur = document.documentElement.clientWidth
-  
-          // Calcul de la largeur de la barre
-          let barre = position / hauteur * largeur
-  
-          // Modification du CSS de la barre
-          document.getElementById("progress").style.width = barre+"px"
-      })
-  }
-  
-  
-  /* Dark Mode */
-  function toggleDarkMode() {
-    var element = document.body;
-    element.classList.toggle("dark");
-  
-    var image = document.getElementById("mode-toggle");
-    if (element.classList.contains("dark")) {
-      image.src = "public/icon/icon_sun.svg";
-      image.alt = "public/icon/icon_moon.svg";
-    } else {
-      image.src = "public/icon/icon_moon.svg";
-      image.alt = "public/icon/icon_sun.svg";
-    }
-  }
-  window.addEventListener("load", function() {
-  var currentTheme = localStorage.getItem("theme");
-  var imageMobile = document.getElementById("mode-toggle");
-  var imageDesktop = document.getElementById("mode-toggle-desktop");
-  if (currentTheme === "dark") {
-    document.body.classList.add("dark");
-    imageMobile.src = "public/icon/icon_sun.svg";
-    imageMobile.alt = "public/icon/icon_moon.svg";
-    imageDesktop.src = "public/icon/icon_sun.svg";
-    imageDesktop.alt = "public/icon/icon_moon.svg";
-  } else {
-    imageMobile.src = "public/icon/icon_moon.svg";
-    imageMobile.alt = "public/icon/icon_sun.svg";
-    imageDesktop.src = "public/icon/icon_moon.svg";
-    imageDesktop.alt = "public/icon/icon_sun.svg";
-  }
-});
-
-  
-/* Dark Mode desktop  */
-function toggleDarkMode() {
-  var element = document.body;
-  element.classList.toggle("dark");
-
-  var image = document.getElementById("mode-toggle");
-  if (element.classList.contains("dark")) {
-    image.src = "public/icon/icon_sun.svg";
-    image.alt = "public/icon/icon_moon.svg";
-  } else {
-    image.src = "public/icon/icon_moon.svg";
-    image.alt = "public/icon/icon_sun.svg";
-  }
-}
-function toggleDarkMode() {
-  var element = document.body;
-  element.classList.toggle("dark");
-
-  // Si le thème sombre est activé, stocke-le dans le Local Storage
-  if (element.classList.contains("dark")) {
-    localStorage.setItem("theme", "dark");
-  }
-  // Sinon, stocke le thème par défaut (clair) dans le Local Storage
-  else {
-    localStorage.setItem("theme", "light");
-  }
-
-  /* Change l'icône du bouton en fonction du thème */
-  var imageMobile = document.getElementById("mode-toggle");
-  var imageDesktop = document.getElementById("mode-toggle-desktop");
-  if (element.classList.contains("dark")) {
-    imageMobile.src = "public/icon/icon_sun.svg";
-    imageMobile.alt = "public/icon/icon_moon.svg";
-    imageDesktop.src = "public/icon/icon_sun.svg";
-    imageDesktop.alt = "public/icon/icon_moon.svg";
-  }
-  else {
-    imageMobile.src = "public/icon/icon_moon.svg";
-    imageMobile.alt = "public/icon/icon_sun.svg";
-    imageDesktop.src = "public/icon/icon_moon.svg";
-    imageDesktop.alt = "public/icon/icon_sun.svg";
-  }
-}
-
-/* Récupère le thème actuel à partir du Local Storage */
-var currentTheme = localStorage.getItem("theme");
-
-/* Si le thème est défini sur "sombre", active le thème sombre */
-if (currentTheme === "dark") {
-  document.body.classList.add("dark");
-
-  /* Change l'icône du bouton en mode sombre */
-  var image = document.getElementById("mode-toggle");
-  image.src = "public/icon/icon_sun.svg";
-  image.alt = "public/icon/icon_moon.svg";
-}
-else {
-  /* Change l'icône du bouton en mode clair */
-  var image = document.getElementById("mode-toggle");
-  image.src = "public/icon/icon_moon.svg";
-  image.alt = "public/icon/icon_sun.svg";
-}
-
-/* Applique le thème sauvegardé lorsqu'une nouvelle page est chargée */
-window.addEventListener("load", function() {
-  var currentTheme = localStorage.getItem("theme");
-  if (currentTheme === "dark") {
-    document.body.classList.add("dark");
-
-    /* Change l'icône du bouton en mode sombre */
-    var image = document.getElementById("mode-toggle");
-    image.src = "public/icon/icon_sun.svg";
-    image.alt = "public/icon/icon_moon.svg";
-  }
-  else {
-    /* Change l'icône du bouton en mode clair */
-    var image = document.getElementById("mode-toggle");
-    image.src = "public/icon/icon_moon.svg";
-    image.alt = "public/icon/icon_sun.svg";
-  }
-});
-  
-  
-  /* Curseur */
-  const cursor = document.getElementById('cursor');
-  document.documentElement.addEventListener("mousemove", evt => {
-    cursor.style.display = 'inline-block';
-    cursor.style.left = `${evt.clientX - cursor.offsetWidth / 2}px`;
-    cursor.style.top = `${evt.clientY - cursor.offsetHeight / 2}px`;
-  });
-  
-  document.documentElement.addEventListener("mouseleave", evt => {
-    cursor.style.display = 'none';
-  });
-  
-  
-      // Wrap every letter in a span
-    var textWrapper = document.querySelector('  .text__animation__cascade .letters');
-    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-    
-    anime.timeline({loop: true})
-      .add({
-        targets: '  .text__animation__cascade .letter',
-        translateY: ["1.1em", 0],
-        translateZ: 0,
-        duration: 750,
-        delay: (el, i) => 50 * i
-      }).add({
-        targets: '  .text__animation__cascade',
-        opacity: 0,
-        duration: 1000,
-        easing: "easeOutExpo",
-        delay: 1000
-      });
-  </script>

@@ -13,7 +13,6 @@ body {
   background-color: var(--impure-white);
   color: var(--impure-black);
   margin: 0;
-  cursor: none;
 }
 
 p { font-size: 16px; margin: 0; font-weight: 300}
@@ -23,7 +22,7 @@ h3 {font-size: 30px; color: var(--impure-black);}
 
 /* Annuler la mise en forme des liens */
 a {font-family: var(--font-oxygen); text-decoration: none; } 
-  a:hover { opacity: 0.7; cursor: none; }
+  a:hover { opacity: 0.7; }
 
   a:not(img) {
     font-family: var(--font-oxygen);
@@ -32,7 +31,6 @@ a {font-family: var(--font-oxygen); text-decoration: none; }
   
   a:not(img):hover {
     opacity: 0.7;
-    cursor: none;
   }
 
 ul {list-style: none; font-family: var(--font-oxygen); color: var(--impure-black);}
@@ -45,7 +43,6 @@ button {
   border: none;
   background: none;
   padding: 0;
-  cursor: none;
   text-decoration: none;
 }
 
