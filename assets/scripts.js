@@ -127,28 +127,11 @@ function toggleDarkMode() {
   }
 }
 
-/* Récupère le thème actuel à partir du Local Storage */
-var currentTheme = localStorage.getItem("theme");
-
-/* Si le thème est défini sur "sombre", active le thème sombre */
-if (currentTheme === "dark") {
-  document.body.classList.add("dark");
-
-  /* Change l'icône du bouton en mode sombre */
-  var image = document.getElementById("mode-toggle");
-  image.src = "assets/public/icon/icon_sun.svg";
-  image.alt = "assets/public/icon/icon_moon.svg";
-}
-else {
-  /* Change l'icône du bouton en mode clair */
-  var image = document.getElementById("mode-toggle");
-  image.src = "assets/public/icon/icon_moon.svg";
-  image.alt = "assets/public/icon/icon_sun.svg";
-}
-
-/* Applique le thème sauvegardé lorsqu'une nouvelle page est chargée */
-window.addEventListener("load", function () {
+function applyTheme() {
+  /* Récupère le thème actuel à partir du Local Storage */
   var currentTheme = localStorage.getItem("theme");
+
+  /* Si le thème est défini sur "sombre", active le thème sombre */
   if (currentTheme === "dark") {
     document.body.classList.add("dark");
 
@@ -163,4 +146,11 @@ window.addEventListener("load", function () {
     image.src = "assets/public/icon/icon_moon.svg";
     image.alt = "assets/public/icon/icon_sun.svg";
   }
+}
+
+applyTheme();
+
+/* Applique le thème sauvegardé lorsqu'une nouvelle page est chargée */
+window.addEventListener("load", function () {
+  applyTheme();
 })

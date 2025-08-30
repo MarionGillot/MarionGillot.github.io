@@ -23,7 +23,7 @@
 
 /* Header desktop */
   .desktop-header {
-    background-color: var(--impure-white);
+    background-color: white;
     top: 0;
     display: flex;
     position: fixed;
