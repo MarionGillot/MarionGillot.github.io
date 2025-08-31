@@ -78,16 +78,6 @@
   color: var(--impure-white);
 }
 
-.dark .header__language__select {
-  background-color: transparent;
-  color: var(--impure-white);
-  border: 0.5px solid var(--impure-white);
-}
-
-.dark .desktop-header {
-  background-color: var(--impure-black);
-}
-
 .dark #progress{
   background-color: var(--impure-white);
   height: 3px;
@@ -96,4 +86,47 @@
   top: 0;
   left: 0;
   z-index: 9999; /* Peut être important si vous avez un menu en position fixe */
+}
+
+
+
+
+
+/* Header */
+.dark .desktop-header {
+  background-color: var(--impure-black);
+  color: var(--impure-white);
+
+  a {
+    color: var(--impure-white);
+  }
+}
+
+.dark .header__menu-btn {
+  color: var(--impure-white);
+}
+
+.dark .lang-link {
+  color: var(--impure-white);
+}
+
+/* Footer */
+.dark .footer {
+  background-color: var(--impure-black);
+  color: var(--impure-white);
+
+  h4 {
+    color: var(--impure-white);
+  }
+
+  a {
+    color: var(--impure-white);
+  }
+}
+
+/* Boutons */
+.dark .all-projects-button {
+  border: 1px solid var(--impure-white);
+  border-radius: 25px;
+  color: var(--impure-white);
 }

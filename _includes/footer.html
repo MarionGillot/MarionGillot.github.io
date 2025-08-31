@@ -1,26 +1,18 @@
 <footer class="footer">
-
-  <div class="wrapper">
-  <div class="footer-container">
-    <div class="footer__mail">
-      <h4>marion.gillot29@gmail.com</h4>
+  <h4><a href="mailto:mgillot.pro@gmail.com">mgillot.pro@gmail.com</a></h4>
+  <div class="footer_links">
+    <div class="left_footer">
+      <a id="footer_home" href="{{ "index.html" | relative_url }}">Accueil</a>
     </div>
-    <div id="w-node-_20e735d8-d215-c43d-1c36-454748e0603e-48e06036" class="footer-links">
-      <a href="/" aria-current="page" class="footer-link w--current">Marion Gillot</a>
-      <a href="/other-pages/projects" class="footer-link"> </a>
-      <a href="/other-pages/about" class="footer-link">About</a>
-      <a href="/other-pages/contacts" class="footer-link">Contact</a>
-      <a href="/other-pages/resume" class="footer-link">Resume</a>
-      <a href="/other-pages/resume" class="footer-link"> </a>
+    <div class="center_footer">
+      <a id="footer_projects" href="{{ "projects.html" | relative_url }}">Réalisations</a>
+      <a id="footer_info" href="{{ "apropos.html" | relative_url }}">Info</a>
+      <a id="footer_contact" href="{{ "contact.html" | relative_url }}">Contact</a>
+    </div>
+    <div class="right_footer">
+      <a id="footer_license_link" href="conditions.html"><span id="footer_license_text">©2025 | Tous droits réservés.</span></a>
     </div>
   </div>
-
-
-
-
-
-
-
 </footer>
 
 <script type="module">
@@ -28,31 +20,87 @@
   const pageLanguage = location.pathname.includes('-en') ? 'english' : 'french';
 
   function updateFooterLinksAndLabels() {
-    // Mise à jour de "Me suivre"
-    const footerTitle = document.getElementById('footer__title');
-    if (footerTitle) {
-      footerTitle.textContent = pageLanguage === 'english' ? 'Follow me' : 'Me suivre';
+    // Mise à jour des labels du footer
+
+    // Mise à jour du lien vers "Accueil"
+    const footerHome = document.getElementById('footer_home');
+    if (footerHome) {
+      // Mise à jour du label
+      footerHome.textContent = pageLanguage === 'english' ? 'Home' : 'Accueil';
+      // Mise à jour du lien
+      let href = footerHome.getAttribute('href');
+      href = href.replace('-en', '');
+      if (pageLanguage === 'english') {
+        href = href.replace('index.html', 'index-en.html');
+      }
+      footerHome.setAttribute('href', href);
     }
 
-    // Mise à jour de "Tous droits réservés."
-    const footerLicense = document.getElementById('footer__license');
-    if (footerLicense) {
-      footerLicense.textContent = pageLanguage === 'english'
-        ? '©mariongillot | All rights reserved.'
-        : '©mariongillot | Tous droits réservés.';
+    // const footerInfo = document.getElementById('footer_info');
+    // if (footerInfo) {
+    //   footerInfo.textContent = pageLanguage === 'english' ? 'Info' : 'Info';
+    // }
+
+    // const footerContact = document.getElementById('footer_contact');
+    // if (footerContact) {
+    //   footerContact.textContent = pageLanguage === 'english' ? 'Contact' : 'Contact';
+    // }
+
+    // Mise à jour du label de "Tous droits réservés."
+    const footerLicenseText = document.getElementById('footer_license_text');
+    if (footerLicenseText) {
+      footerLicenseText.textContent = pageLanguage === 'english'
+        ? '©2025 | All rights reserved.'
+        : '©2025 | Tous droits réservés.';
     }
 
-    // Mise à jour du lien vers les conditions
-    const conditionsLink = document.getElementById('footer__license__link');
-    if (conditionsLink) {
-      let href = conditionsLink.getAttribute('href');
+    // Mise à jour du lien de "Tous droits réservés."
+    const footerLicenseLink = document.getElementById('footer_license_link');
+    if (footerLicenseLink) {
+      let href = footerLicenseLink.getAttribute('href');
       // Retrait de -en si présent
       href = href.replace('-en', '');
       if (pageLanguage === 'english') {
         // Ajout de -en si page en anglais
         href = href.replace('.html', '-en.html');
       }
-      conditionsLink.setAttribute('href', href);
+      footerLicenseLink.setAttribute('href', href);
+    }
+
+    // Mise à jour du label et du lien vers "Réalisations"
+    const footerProjects = document.getElementById('footer_projects');
+    if (footerProjects) {
+      // Mise à jour du label
+      footerProjects.textContent = pageLanguage === 'english' ? 'Projects' : 'Réalisations';
+      // Mise à jour du lien
+      let href = footerProjects.getAttribute('href');
+      href = href.replace('-en', '');
+      if (pageLanguage === 'english') {
+        href = href.replace('projects.html', 'projects-en.html');
+      }
+      footerProjects.setAttribute('href', href);
+    }
+
+    // Mise à jour du lien vers "Info"
+    const footerInfo = document.getElementById('footer_info');
+    if (footerInfo) {
+      let href = footerInfo.getAttribute('href');
+      href = href.replace('-en', '');
+      if (pageLanguage === 'english') {
+        href = href.replace('apropos.html', 'about-en.html');
+      }
+      footerInfo.setAttribute('href', href);
+    }
+
+    // Mise à jour du lien vers "Contact"
+    const footerContact = document.getElementById('footer_contact');
+    if (footerContact) {
+      let href = footerContact.getAttribute('href');
+      href = href.replace('-en', '');
+      if (pageLanguage === 'english') {
+        href = href.replace('contact.html', 'contact-en.html');
+      }
+      footerContact.setAttribute('href', href);
     }
   }
 

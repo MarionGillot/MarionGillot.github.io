@@ -10,7 +10,7 @@ body {
   font-family: var(--font-oxygen);
   font-size: var(--body);
   line-height: 1.6;
-  background-color: white;
+  background-color: #F9F9F9;
   color: var(--impure-black);
   margin: 0;
 }
@@ -64,29 +64,9 @@ button {
 }
 
 /* Page projets */
-/* #filter {
+#filter {
   margin-top: 2%;
 }
-
-.filter-button {
-  padding: 10px 20px;
-  margin: 0 10px;
-  background-color: var(--gray-2);
-  border: none;
-  border-radius: 5px;
-}
-
-@media (max-width: 464px) {
-  .filter-button {
-    padding: 10px 14px;
-    margin: 0 5px;
-    background-color: var(--gray-2);
-    border: none;
-    border-radius: 5px;
-  }
-}
-
-*/
 
 /* Page à propos */
 .about__description {
@@ -124,9 +104,7 @@ button {
 }
 
 
-.hero__home__title {
-  text-transform: uppercase;
-}
+
 
 
 

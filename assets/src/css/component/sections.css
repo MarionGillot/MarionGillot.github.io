@@ -31,7 +31,9 @@
 
 .section__center {
     text-align: center;
-    margin: 10%;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-bottom: 5em;
 }
 
     /* Appliquer la mise en page en une seule colonne pour les résolutions de téléphone */
@@ -54,6 +56,7 @@
 /* Page home */
 .section__grid__home {
     margin-left: 3%;
+    margin-right: 3%;
     margin-top: 10%;
     display: grid;
     grid-template-columns: 1fr 1fr;

@@ -52,3 +52,16 @@
   .face-button:hover .face-primary {
     margin-top: -64px;
   }  
+
+  .all-projects-button {
+    padding: 8px 20px;
+    border: 1px solid var(--impure-black);
+    border-radius: 25px;
+    color: var(--impure-black);
+  }
+
+  @media (max-width: 830px) {
+    .all-projects-button {
+      visibility: hidden;
+    }
+  }
