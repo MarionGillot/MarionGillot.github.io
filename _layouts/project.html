@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+<div class="content-description">
+    <div class="mini-info">
+        <ul>
+            <li>
+                <h3 class="no-line">{% if page.lang == 'fr' %}Année{% else %}Year{% endif %}</h3>
+                <p>{{ page.date | date: '%Y' }}</p>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <h3 class="no-line">{% if page.lang == 'fr' %}Logiciels{% else %}Software{% endif %}</h3>
+                {% for software in page.software %}
+                <p>{{ software }}</p>
+                {% endfor %}
+            </li>
+        </ul>
+    </div>
+
+    <div class="info">
+        <h2>{{ page.name }}</h2>
+        <p>{{ page.description }}</p>
+    </div>
+</div>
+
+<img src="{{ page.illustration[0].src }}" alt="{{ page.illustration[0].alt }}">
+
+
+{{ content }}

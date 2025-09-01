@@ -100,7 +100,6 @@
   margin-top: 2%;
   opacity: 0;
   animation: fade-in-details 2s forwards;
-  font-weight: 500;
 }
 
 
@@ -140,32 +139,30 @@
 
 
 /* page à propos */
-.hero__about {
-  margin-top: 5% ;
-}
-
 .headlines {
   color: var(--impure-white);
-  display: grid;
-
   width: 100%;
-  font-weight: 800;
-  padding: var(--space5x) ;
+
+  img {
+    display: block;
+    margin: 0 auto;
+    max-width: 450px;
+  }
  }
  
 
   @media (max-width: 768px) {
   .headlines {
-    padding-top: var(--space5x);
     padding-left: var(--space3x);
     padding-right: var(--space3x);
   }
  }
  
  .headline {
-   font-size: 7vw;
-   font-family: var(--font-bebas-neue);
+   font-size: 4em;
+   font-weight: 350;
    margin: 0;
+   text-align: center;
  }
  
  
@@ -186,9 +183,10 @@
 .hero_links {
   display: flex;
   gap: 2em;
-  margin-bottom: 0.5em;
+  margin-bottom: 1.5em;
 
   .hero_link {
+    font-family: var(--font-sora);
     text-decoration: underline;
     color: inherit;
   }

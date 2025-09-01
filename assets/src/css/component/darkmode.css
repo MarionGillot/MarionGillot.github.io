@@ -110,6 +110,14 @@
   color: var(--impure-white);
 }
 
+.dark .nav-icon {
+  filter: brightness(0) invert(1);
+}
+
+.dark .nav-text {
+  color: var(--impure-white);
+}
+
 /* Footer */
 .dark .footer {
   background-color: var(--impure-black);
@@ -128,5 +136,20 @@
 .dark .all-projects-button {
   border: 1px solid var(--impure-white);
   border-radius: 25px;
+  color: var(--impure-white);
+}
+
+.dark .content-title, .dark .content-date {
+  color: var(--impure-white);
+}
+
+.dark .download-resume-button {
+  border: 1px solid var(--impure-white);
+  border-radius: 25px;
+  color: var(--impure-white);
+}
+
+/* A propos */
+.dark .container__card .card .card__title h3 {
   color: var(--impure-white);
 }

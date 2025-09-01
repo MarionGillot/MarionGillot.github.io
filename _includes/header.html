@@ -20,8 +20,9 @@
 
       <nav class="header__menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
         <ul class="menu__list list-unstyled">
-          <li class="menu__item"><a class="menu__link" href="index.html">Projets</a></li>
-          <li class="menu__item"><a class="menu__link" href="apropos.html">À propos</a></li>
+          <li class="menu__item"><a class="menu_link" href="index.html"><span class="nav-text">Accueil</span><img class="nav-icon" src="assets/public/icon/icon_arrow-nav.svg" alt="" aria-hidden="true"></a></li>
+          <li class="menu__item"><a class="menu_link" href="projects.html"><span class="nav-text">Réalisations</span><img class="nav-icon" src="assets/public/icon/icon_arrow-nav.svg" alt="" aria-hidden="true"></a></li>
+          <li class="menu__item"><a class="menu_link" href="apropos.html"><span class="nav-text">À propos</span><img class="nav-icon" src="assets/public/icon/icon_arrow-nav.svg" alt="" aria-hidden="true"></a></li>
         </ul>
       </nav>
     </div>
@@ -31,9 +32,9 @@
     <div class="left_header">
       <p id="header-menu-label">Menu</p>
       <ul class="header_menu">
-        <li class="header_menu_item"><a class="header_menu_link" href="index.html">Accueil ↗</a></li>
-        <li class="header_menu_item"><a class="header_menu_link" href="projects.html">Réalisations ↗</a></li>
-        <li class="header_menu_item"><a class="header_menu_link" href="apropos.html">À propos ↗</a></li>
+  <li class="header_menu_item"><a class="header_menu_link" href="index.html"><span class="nav-text">Accueil</span><img class="nav-icon" src="assets/public/icon/icon_arrow-nav.svg" alt="" aria-hidden="true"></a></li>
+  <li class="header_menu_item"><a class="header_menu_link" href="projects.html"><span class="nav-text">Réalisations</span><img class="nav-icon" src="assets/public/icon/icon_arrow-nav.svg" alt="" aria-hidden="true"></a></li>
+  <li class="header_menu_item"><a class="header_menu_link" href="apropos.html"><span class="nav-text">À propos</span><img class="nav-icon" src="assets/public/icon/icon_arrow-nav.svg" alt="" aria-hidden="true"></a></li>
       </ul>
     </div>
     <div class="center_header">
@@ -48,8 +49,9 @@
       </button>
     </div>
     <div class="right_header">
-      <p id="header_email"><a href="mailto:mgillot.pro@gmail.com">mgillot.pro@gmail.com</a></p>
+      <a id="header_email" href="mailto:mgillot.pro@gmail.com">mgillot.pro@gmail.com</a>
     </div>
+  </div><!-- close .desktop-header -->
   </header>
 
 <script type="module">
@@ -85,24 +87,50 @@
   });
 
   function updateHeaderLinksAndLabels() {
-    const links = document.querySelectorAll('.header_menu_link, .header a');
-
+    const links = document.querySelectorAll('.header_menu_link, .menu_link');
     links.forEach(link => {
+      // Update href with language suffix logic
       let href = link.getAttribute('href') || '';
       href = href.replace('-en', '');
-
       if (pageLanguage === 'english') {
         href = href.replace('.html', '-en.html');
       }
       link.setAttribute('href', href);
 
+      // Determine base filename for label
       const destination = href.replace('-en', '').split('/').pop() || '';
+      let label = null;
       if (destination.startsWith('index')) {
-        link.textContent = pageLanguage === 'english' ? 'Home ↗' : 'Accueil ↗';
+        label = pageLanguage === 'english' ? 'Home' : 'Accueil';
       } else if (destination.startsWith('projects')) {
-        link.textContent = pageLanguage === 'english' ? 'Projects ↗' : 'Réalisations ↗';
+        label = pageLanguage === 'english' ? 'Projects' : 'Réalisations';
       } else if (destination.startsWith('apropos')) {
-        link.textContent = pageLanguage === 'english' ? 'About me ↗' : 'À propos ↗';
+        label = pageLanguage === 'english' ? 'About me' : 'À propos';
+      }
+      if (label) {
+        let textSpan = link.querySelector('.nav-text');
+        if (!textSpan) {
+          textSpan = document.createElement('span');
+          textSpan.className = 'nav-text';
+          // Clear existing text but keep existing icon if already inserted
+          link.childNodes.forEach(node => {
+            if (node.nodeType === Node.TEXT_NODE) {
+              node.remove();
+            }
+          });
+          link.insertBefore(textSpan, link.firstChild);
+        }
+        textSpan.textContent = label;
+        // Inject icon if missing
+        if (!link.querySelector('.nav-icon')) {
+          const img = document.createElement('img');
+          img.src = 'assets/public/icon/icon_arrow-nav.svg';
+          // dimensions controlled via CSS (em units)
+          img.className = 'nav-icon';
+          img.alt = '';
+          img.setAttribute('aria-hidden', 'true');
+          link.appendChild(img);
+        }
       }
     });
   }

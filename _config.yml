@@ -1,6 +1,18 @@
 url: ""
 title: "Marion Gillot"
 
+collections:
+  projects:
+    output: true
+    permalink: "/:name:output_ext"
+
+defaults:
+  - scope:
+      path: ""
+      type: projects
+    values:
+      permalink: "/:name:output_ext"
+
 exclude:
   - .sass-cache/
   - .jekyll-cache/

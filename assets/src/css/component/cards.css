@@ -10,40 +10,30 @@
 }
 
 .container__card .card {
-    position: relative;
-    border: 5 var(--impure-black);
-    width: 300px;
-    height: 460px;
-    background: var(--gray-2);
-    margin: 20px;
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
-}
-
-.container__card .card .content {
 	position: relative;
+	border-radius: 15px;
+	border: 1px solid var(--impure-black);
+	width: 300px;
+	height: 375px;
+	margin: 20px;
 	display: flex;
-	justify-content: center;
-	align-items: center;
 	flex-direction: column;
-	transition: 0.5s;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 30px 24px 40px;
+	text-align: center;
 }
 
-.container__card .card:hover .content {
-	transform: translateY(-20px);
-}
+.container__card .card .content { display: contents; }
 
-.container__card .card .content .card__img {
+.container__card .card .card__img {
 	position: relative;
-    width: 80px;
-    height: 80px;
+    width: 40px;
+    height: 40px;
 	overflow: hidden;
 }
 
-.container__card .card .content .card__img img {
+.container__card .card .card__img img {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -52,45 +42,34 @@
 	object-fit: cover;
 }
 
-.container__card .card .content .card__title h3 {
+.container__card .card .card__title h3 {
+	font-family: var(--font-sora);
 	color: var(--impure-black);
-	text-transform: uppercase;
 	letter-spacing: 2px;
-	font-weight: 500;
-	font-size: 18px;
+	font-weight: 800;
+	font-size: 22px;
 	text-align: center;
-	margin: 80px 0 85px;
+	margin: 20px 0 40px;
 	line-height: 1.1em;
 }
 
 .container__card .card .content .card__title h3 span {
 	font-size: 12px;
 	font-weight: 300;
-	text-transform: initial;
 }
 
-.container__card .card .card__sci {
-	position: absolute;
-	bottom: 50px;
-	text-align: center;
+.container__card .card .card__images {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 24px;
+	margin: 0 0 40px;
 }
 
-.container__card .card .card__sci p {
-	list-style: none;
-	margin: 0 10px;
-	transform: translateY(40px);
-	transition: 0.5s;
-	opacity: 0;
-}
-
-.container__card .card:hover .card__sci p {
-	transform: translateY(0px);
-	opacity: 1;
-}
-
-.container__card .card .card__sci p a {
-	color: var(--impure-black);
-	font-size: 20px;
+/* Description text */
+.container__card .card .card__text {
+	margin: 0;
+	opacity: 0.8;
 }
 
 .item {

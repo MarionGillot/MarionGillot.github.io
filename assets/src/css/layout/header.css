@@ -28,12 +28,37 @@
 
 header {
   a {
-      color: var(--impure-black);
-    }
+    color: var(--impure-black);
+  }
+  .header_menu_link, .menu_link {
+    display: inline-flex;
+    align-items: center;
+    gap: .4em;
+  }
+  .header_menu_link .nav-icon, .menu_link .nav-icon {
+    flex: 0 0 auto;
+    width: 0.7em;
+    height: 0.75em;
+    display: inline-block;
+    transform: translateY(5%);
+  }
+
+  .menu_link .nav-icon {
+    width: 0.5em;
+    height: 0.55em;
+  }
+  
+  .lang-link {
+    font-family: var(--font-sora);
+  }
 
   .lang-link.active {
     opacity: 0.7;
   }
+}
+
+#header_email {
+  font-family: var(--font-sora);
 }
 
 /* Header desktop */

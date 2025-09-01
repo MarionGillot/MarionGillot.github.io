@@ -1,21 +1,23 @@
 ---
 layout: default
-title: Projets
+title: Home
 lang: en
 ---
-
-<div id="progress"></div>
-
 
 <div class="hero__home">
   <div class="section__grid__home">
     <div class="hero_up">
-      <h1 class="hero__home__title">GRAPHIST<br> WEB/DESIGNER</h1>
-      <p class="hero__details">[ Specialising in the creation of unique and innovative visual identity and web designs.
-        ]</p>
+      <div class="hero_links">
+        <a href="https://www.linkedin.com/in/marion-gillot-4b4b5923a/" target="_blank" class="hero_link">LinkedIn</a>
+        <a href="https://www.behance.net/mariongillot" target="_blank" class="hero_link">Behance</a>
+      </div>
+      <h1 class="hero__home__title">Marion Gillot</h1>
+      <p class="hero__details">DIGITAL DESIGNER</p>
     </div>
-    <div><img src="assets/public/img/profil-home.jpg" class="profil__home" alt="profile picture of marion gillot">
-    </div>
+  </div>
+
+  <div>
+    <img src="{{ 'assets/public/img/profil-home.jpg' | relative_url }}" class="profil__home" alt="image de profil de marion gillot">
   </div>
 
   <div class="hero__home__down">
@@ -23,124 +25,37 @@ lang: en
       <div class="arrow bounce">
         <div class="fa fa-arrow-down fa-2x"></div>
       </div>
-      <p class="arrow__text">scroll</p>
+      <p class="arrow__text">Scroll</p>
     </div>
-
-    <div>
-      <p class="hero__details">[ Located in France ]</p>
-      <h2 class="hero__home__chapo">Marion Gillot</h2>
-    </div>
-  </div>
-</div>
-</div>
-
-
-<div class="headlines">
-  <h3 class="headline">Works.</h3>
-  <span class="ligne"></span>
-  <div id="filter">
-    <button class="filter-button" data-filter="all">All</button>
-    <button class="filter-button" data-filter="category1">Card</button>
-    <button class="filter-button" data-filter="category2">Poster</button>
-    <button class="filter-button" data-filter="category3">Drawing</button>
   </div>
 </div>
 
 <div class="fade fade-delay-3 reval">
   <div class="container__works">
     <div class="grid__works">
-      <div class="item category1">
-        <div class="overlay-outer">
-          <a href="work-lumei-en.html">
-            <div class="overlay"></div>
-            <img src="assets/public/img/projets/work_carte_visite.jpg" class="image"
-              alt="projet de la carte de visite">
-            <div class="content-details fadeIn_bottom">
-              <h3 class="content-title">lumei</h3>
-            </div>
-          </a>
-        </div>
-      </div>
 
-      <div class="item category2">
+      {% assign sorted_projects = site.projects | sort: "date" | reverse %}
+      {% for project in sorted_projects %}
+        {% if page.lang != project.lang %}{% continue %}{% endif %}
         <div class="overlay-outer">
-          <a href="work-album-en.html">
-            <div class="overlay"></div>
-            <img src="assets/public/img/projets/work_album.jpg" class="image" alt="projet album">
-            <div class="content-details fadeIn_bottom">
-              <h3 class="content-title">Gamze Aydemir</h3>
-            </div>
+          <a href="{{ project.url | relative_url }}">
+            <img
+              src="{{ project.cover[0].src | relative_url }}"
+              class="image"
+              alt="{{ project.cover[0].alt | escape }}"
+              loading="lazy">
           </a>
+          <div class="content-details">
+            <p class="content-title">{{ project.name }}</p>
+            <p class="content-date">{{ project.date | date: "%Y" }}</p>
+          </div>
         </div>
-      </div>
+      {% endfor %}
 
-      <div class="item category3">
-        <div class="overlay-outer">
-          <a href="work-reve-en.html">
-            <div class="overlay"></div>
-            <img src="assets/public/img/projets/work_reve.jpg" class="image" alt="projet reve">
-            <div class="content-details fadeIn_bottom">
-              <h3 class="content-title">Le rêve</h3>
-            </div>
-          </a>
-        </div>
-      </div>
-
-      <div class="item category1">
-        <div class="overlay-outer">
-          <a href="work-carte-en.html">
-            <div class="overlay"></div>
-            <img src="assets/public/img/projets/work_carte.jpg" class="image" alt="projet carte postale">
-            <div class="content-details fadeIn_bottom">
-              <h3 class="content-title">Cassandre</h3>
-            </div>
-          </a>
-        </div>
-      </div>
-
-      <div class="item category2">
-        <div class="overlay-outer">
-          <a href="work-expo-en.html">
-            <div class="overlay"></div>
-            <img src="assets/public/img/projets/work_expo2025.jpg" class="image" alt="projet Exposition 2025">
-            <div class="content-details fadeIn_bottom">
-              <h3 class="content-title">Exposition universelle</h3>
-            </div>
-          </a>
-        </div>
-      </div>
-
-
-      <div class="item category2">
-        <div class="overlay-outer">
-          <a href="work-film-en.html">
-            <div class="overlay"></div>
-            <img src="assets/public/img/projets/work_film.jpg" class="image" alt="projet The psychopath">
-            <div class="content-details fadeIn_bottom">
-              <h3 class="content-title">The psychopath</h3>
-            </div>
-          </a>
-        </div>
-      </div>
     </div>
   </div>
 </div>
 
-
 <div class="section__center">
-  <h3>Download my portfolio in 1 click!</h3>
-  <div>
-    <a href="assets/public/portfolio.pdf" download>
-      <div class="face-button">
-
-        <div class="face-primary">
-          Download PDF
-        </div>
-
-        <div class="face-secondary">
-          Size : 52,3 Mo
-        </div>
-    </a>
-  </div>
-</div>
+  <a class="all-projects-button" href="{{ 'projects-en.html' | relative_url }}">See all projects</a>
 </div>

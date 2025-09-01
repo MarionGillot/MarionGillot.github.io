@@ -1,0 +1,29 @@
+---
+layout: default
+title: Projects
+lang: en
+---
+
+<div class="content-wrapper">
+    <h1 class="projects-header">Projects</h1>
+
+    <div class="projects-wrapper">
+    {% assign sorted_projects = site.projects | sort: "date" | reverse %}
+    {% for project in sorted_projects %}
+        {% if page.lang != project.lang %}{% continue %}{% endif %}
+    <div class="overlay-outer">
+        <a href="{{ project.url | relative_url }}">
+            <img
+            src="{{ project.cover[0].src | relative_url }}"
+            class="image"
+            alt="{{ project.cover[0].alt | escape }}"
+            loading="lazy">
+        </a>
+        <div class="content-details">
+            <p class="content-title">{{ project.name }}</p>
+            <p class="content-date">{{ project.date | date: "%Y" }}</p>
+        </div>
+        </div>
+    {% endfor %}
+    </div>
+</div>

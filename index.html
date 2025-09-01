@@ -1,10 +1,8 @@
 ---
 layout: default
-title: Projets
+title: Accueil
 lang: fr
 ---
-
-<div id="progress"></div>
 
 <div class="hero__home">
   <div class="section__grid__home">
@@ -17,89 +15,47 @@ lang: fr
       <p class="hero__details">DIGITAL DESIGNER</p>
     </div>
   </div>
-    <div><img src="assets/public/img/profil-home.jpg" class="profil__home" alt="image de profil de marion gillot">
-    </div>
+
+  <div>
+    <img src="{{ 'assets/public/img/profil-home.jpg' | relative_url }}" class="profil__home" alt="image de profil de marion gillot">
+  </div>
 
   <div class="hero__home__down">
     <div>
       <div class="arrow bounce">
         <div class="fa fa-arrow-down fa-2x"></div>
       </div>
-      <p class="arrow__text">scroll</p>
+      <p class="arrow__text">Scroll</p>
     </div>
   </div>
-</div>
 </div>
 
 <div class="fade fade-delay-3 reval">
   <div class="container__works">
     <div class="grid__works">
-      
-      <div class="overlay-outer">
-        <a href="work-lumei.html">
-          <img src="assets/public/img/projets/work_carte_visite.jpg" class="image" alt="projet de la carte de visite">
-        </a>
-        <div class="content-details">
-          <p class="content-title">lumei</p>
-          <p class="content-date">2022</p>
-        </div>
-      </div>
 
-      <div class="overlay-outer">
-        <a href="work-album.html">
-          <img src="assets/public/img/projets/work_album.jpg" class="image" alt="projet album">
-        </a>
-        <div class="content-details">
-          <p class="content-title">Gamze Aydemir</p>
-          <p class="content-date">2023</p>
+      {% assign sorted_projects = site.projects | sort: "date" | reverse %}
+      {% for project in sorted_projects %}
+        {% if page.lang != project.lang %}{% continue %}{% endif %}
+        <div class="overlay-outer">
+          <a href="{{ project.url | relative_url }}">
+            <img
+              src="{{ project.cover[0].src | relative_url }}"
+              class="image"
+              alt="{{ project.cover[0].alt | escape }}"
+              loading="lazy">
+          </a>
+          <div class="content-details">
+            <p class="content-title">{{ project.name }}</p>
+            <p class="content-date">{{ project.date | date: "%Y" }}</p>
+          </div>
         </div>
-      </div>
+      {% endfor %}
 
-      <div class="overlay-outer">
-        <a href="work-reve.html">
-          <img src="assets/public/img/projets/work_reve.jpg" class="image" alt="projet reve">
-        </a>
-        <div class="content-details">
-          <p class="content-title">Le rêve</p>
-          <p class="content-date">2023</p>
-        </div>
-      </div>
-
-      <div class="overlay-outer">
-        <a href="work-carte.html">
-          <img src="assets/public/img/projets/work_carte.jpg" class="image" alt="projet carte postale">
-        </a>
-        <div class="content-details">
-          <p class="content-title">Cassandre</p>
-          <p class="content-date">2022</p>
-        </div>
-      </div>
-
-      <div class="overlay-outer">
-        <a href="work-expo.html">
-          <img src="assets/public/img/projets/work_expo2025.jpg" class="image" alt="projet Exposition 2025">
-        </a>
-        <div class="content-details">
-          <p class="content-title">Exposition universelle</p>
-          <p class="content-date">2025</p>
-        </div>
-      </div>
-
-      <div class="overlay-outer">
-        <a href="work-film.html">
-          <img src="assets/public/img/projets/work_film.jpg" class="image" alt="projet The psychopath">
-        </a>
-        <div class="content-details">
-          <p class="content-title">The psychopath</p>
-          <p class="content-date">2023</p>
-        </div>
-      </div>
     </div>
   </div>
 </div>
 
-  <div class="section__center">
-    <a class="all-projects-button" href="{{ "projects.html" | relative_url }}">Voir tous les projets</a>
-  </div>
+<div class="section__center">
+  <a class="all-projects-button" href="{{ 'projects.html' | relative_url }}">Voir tous les projets</a>
 </div>
-</main>

@@ -16,7 +16,7 @@
   display: block;
   color: var(--impure_white);
   font-weight: 300;
-  font-family: var(--font-oxygen);
+  font-family: var(--font-nohemi);
   text-shadow: 0px 0px 4px var(--impure_white);
   animation: fadeInText 3s ease-in 3.5s forwards, flicker4 5s linear 7.5s infinite, hueRotate 6s ease-in-out 3s infinite;
 }

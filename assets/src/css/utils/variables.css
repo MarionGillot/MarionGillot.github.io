@@ -16,9 +16,10 @@
 --shadow-black:  0px 0px 33px rgba(0, 0, 0, 0.25);
 --shadow-white:  0px 0px 29px rgba(255, 255, 255, 0.25);
 
-/* Police de caractère */
---font-oxygen: 'Oxygen', sans-serif;
---font-bebas-neue : 'Bebas Neue';
+/* Police de caractère (Nohemi prioritaire) */
+--font-nohemi: 'Nohemi', 'Oxygen', sans-serif;
+--font-sora: 'Sora', sans-serif;
+--font-bebas-neue : 'Bebas Neue', sans-serif;
 
 /* Font variantes */
 --letter-spacing: 0.05em;
