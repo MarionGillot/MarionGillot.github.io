@@ -39,8 +39,8 @@ a {font-family: var(--font-nohemi); text-decoration: none; }
     opacity: 0.7;
   }
 
-ul {list-style: none; font-family: var(--font-nohemi); color: var(--impure-black);}
-li { color: var(--impure-black);}
+ul {list-style: none; text-decoration: none ;font-family: var(--font-nohemi);}
+li { color: black;}
 
 /* Permet d'annuler la mise en forme des bouton qu'applique le navigateur. */
 button {
