@@ -49,7 +49,7 @@
 
 /* Page conditions d'utilisations du site */
 .section__juridique {
-    margin: 3%;
+    margin: 10%;
   }
 
 
@@ -73,3 +73,13 @@
         }
     }
 
+
+
+
+
+    .img_affiches {
+        margin-left: 5%;
+        margin-right: 5%;
+        display: flex;
+        gap: 1rem;
+    }
