@@ -69,8 +69,7 @@
 
 /* Disposition des éléments */
 .flex__text {
-  margin: 10%;
-  margin-top: 0;
+  margin: 10% ;
   display: grid;
   grid-template-columns: repeat(2, 1fr);    
   align-items: center;
