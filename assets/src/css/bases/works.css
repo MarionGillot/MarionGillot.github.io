@@ -160,3 +160,7 @@ color: var(--impure-black);
   object-fit: cover;
 }
 
+
+.center {
+  justify-items: center;
+}
