@@ -70,6 +70,7 @@
 /* Disposition des éléments */
 .flex__text {
   margin: 10%;
+  margin-top: 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);    
   align-items: center;
@@ -139,3 +140,24 @@ color: var(--impure-black);
 .other__arrow p {
   color: var(--impure-black);
 }
+
+
+.flex__heritage {
+  margin: 10%;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(2, 1fr);    
+  align-items: center;
+  max-height: auto;
+  gap: 2%;
+}
+
+
+
+
+.flex__heritage img {
+  height: 500px;
+  width: 1000px;
+  object-fit: cover;
+}
+
