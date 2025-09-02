@@ -41,8 +41,11 @@ figcaption {
 
 .image {
   width: 100%;
+  aspect-ratio: 1 / 1.25;
   height: auto;
+  object-fit: cover;
   max-width: 100%;
+  display: block;
 }
 
 .overlay-outer {
@@ -63,10 +66,8 @@ figcaption {
     scroll-snap-type: none;
   }
 
-  .grid__works .image {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
+  .image {
+    aspect-ratio: 2 / 1;
   }
 }
 /* @media (max-width: 550px) {
@@ -87,20 +88,20 @@ figcaption {
 
 .content-details {
   width: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto;
+  align-items: start;
+  gap: 0.15rem 0.5rem;
+  margin-top: 0.35rem;
 }
 
-.content-details h3 {
-  color: #000;
-  font-weight: 800;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  font-size: 25px;
+.content-index {
+  font-size: 2em;
 }
-
-.content-title, .content-date {
-    font-family: var(--font-sora);
-    color: var(--impure-black);
-}
+.content-details .content-title { grid-column: 1; grid-row: 1; margin: 0; }
+.content-details .content-arrow { grid-column: 2; grid-row: 1; align-self: flex-start; width: 22px; height: auto; margin-top: 8px;}
+.content-details .content-date { grid-column: 1 / span 2; grid-row: 2; margin: 0; }
 
 .fadeIn_bottom {
   top: 80%;
@@ -125,9 +126,17 @@ figcaption {
 
   .content-details {
     display: flex;
-    justify-content: space-between;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0;
+    margin-top: .45rem;
   }
+  .content-details .content-title { margin: 0; }
+  .content-details .content-date { margin: 0 0 0 auto; padding-left: 1rem; }
+  .content-details .content-arrow { width: 22px; margin-left: 2.5rem; flex: 0 0 auto;}
 }
+
+.dark .content-arrow { filter: brightness(0) invert(1); }
 
 @keyframes fade-in {
   from {

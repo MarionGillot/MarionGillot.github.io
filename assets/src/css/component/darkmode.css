@@ -46,9 +46,7 @@
 }
 
 .dark .container__card .card {
-  border: 1px  var(--impure-white);
-  background: var(--immpure-black);
-  box-shadow: 0 8px 12px var(--impure-white);
+  border: 1px solid var(--impure-white);
   color: var(--impure-white);
 }
 
@@ -152,4 +150,9 @@
 /* A propos */
 .dark .container__card .card .card__title h3 {
   color: var(--impure-white);
+}
+
+/* Works */
+.dark .other__arrow img {
+  filter: brightness(0) invert(1);
 }

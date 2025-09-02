@@ -13,7 +13,17 @@
       flex-direction: column;
   }
   .mini-info {
-      order: 1;
+    order: 1;
+    display: flex;
+    flex-direction: row;
+    gap: 1.25rem;
+  }
+  .mini-info ul {
+    width: auto;
+    margin: 0;
+  }
+  .mini-info ul + ul {
+    margin-left: 1.25rem;
   }
   .info {
       order: 2;

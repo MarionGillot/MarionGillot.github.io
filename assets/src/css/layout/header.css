@@ -1,4 +1,8 @@
 /* Header mobile */
+.header__menu-btn {
+  color: var(--impure-black);
+}
+
 .mobile-header {
     top: 0;
     width: 100%;

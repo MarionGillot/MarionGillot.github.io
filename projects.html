@@ -22,6 +22,7 @@ lang: fr
             <div class="content-details">
                 <p class="content-title">{{ project.name }}</p>
                 <p class="content-date">{{ project.date | date: "%Y" }}</p>
+                <img class="content-arrow" src="{{ 'assets/public/icon/icon_arrow-after.svg' | relative_url }}" alt="" aria-hidden="true" loading="lazy">
             </div>
         </div>
     {% endfor %}
