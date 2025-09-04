@@ -48,7 +48,10 @@ figcaption {
   display: block;
 }
 
-
+.overlay-outer {
+  flex: 0 0 32%;
+  scroll-snap-align: start;
+}
 
 @media (max-width: 830px) {
   .overlay-outer {
