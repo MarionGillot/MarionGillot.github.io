@@ -30,7 +30,7 @@ lang: en
   </div>
 </div>
 
-<div class="">
+<div class="fade fade-delay-3 reval">
   <div class="container__works">
     <div class="grid__works">
 
@@ -40,6 +40,27 @@ lang: en
         {% if page.lang != project.lang %}{% continue %}{% endif %}
         {% assign index = index | plus: 1 %}
         <div class="overlay-outer">
+          <p class="content-index">{% if index < 10 %}0{{ index }}{% else %}{{ index }}{% endif %}</p>
+          <a href="{{ project.url | relative_url }}">
+            <img
+              src="{{ project.cover[0].src | relative_url }}"
+              class="image"
+              alt="{{ project.cover[0].alt | escape }}"
+              loading="lazy">
+          </a>
+          <div class="content-details">
+            <p class="content-title">{{ project.name }}</p>
+            <p class="content-date">{{ project.date | date: "%Y" }}</p>
+            <img class="content-arrow" src="{{ 'assets/public/icon/icon_arrow-after.svg' | relative_url }}" alt="" aria-hidden="true" loading="lazy">
+          </div>
+        </div>
+      {% endfor %}
+
+      {% assign index = 0 %}
+      {% for project in sorted_projects %}
+        {% if page.lang != project.lang %}{% continue %}{% endif %}
+        {% assign index = index | plus: 1 %}
+        <div class="overlay-outer desktop-only">
           <p class="content-index">{% if index < 10 %}0{{ index }}{% else %}{{ index }}{% endif %}</p>
           <a href="{{ project.url | relative_url }}">
             <img

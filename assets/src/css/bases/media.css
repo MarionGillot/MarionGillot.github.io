@@ -22,7 +22,6 @@ figcaption {
 .container__works {
   margin: 30px;
   display: flex;
-  justify-content: center;
 }
 
 .grid__works {
@@ -53,6 +52,34 @@ figcaption {
   scroll-snap-align: start;
 }
 
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (min-width: 831px) {
+  .container__works {
+    overflow: hidden;
+  }
+  .grid__works {
+    width: max-content;
+    overflow-x: visible;
+    animation: scroll 90s linear infinite;
+  }
+  .grid__works .overlay-outer {
+    flex: none;
+    width: 30vw;
+  }
+  /* Pause de l'auto-scroll lors du survol */
+  /* .container__works:hover .grid__works {
+    animation-play-state: paused;
+  } */
+}
+
 @media (max-width: 830px) {
   .overlay-outer {
     flex: 0 0 auto;
@@ -68,6 +95,10 @@ figcaption {
 
   .image {
     aspect-ratio: 2 / 1;
+  }
+
+  .desktop-only {
+    display: none;
   }
 }
 /* @media (max-width: 550px) {
