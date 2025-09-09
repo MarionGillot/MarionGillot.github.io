@@ -34,22 +34,29 @@ header {
   a {
     color: var(--impure-black);
   }
-  .header_menu_link, .menu_link {
+  .header_menu_link {
     display: inline-flex;
     align-items: center;
     gap: .4em;
   }
-  .header_menu_link .nav-icon, .menu_link .nav-icon {
+  .header_menu_link .nav-icon {
     flex: 0 0 auto;
     width: 0.7em;
     height: 0.75em;
     display: inline-block;
-    transform: translateY(5%);
+    transform: translateY(-10%);
   }
 
-  .menu_link .nav-icon {
+  .mobile_menu_link{
+    font-size: 2.5em;
+    font-family: var(--font-bebas-neue);
+  }
+
+  .mobile_menu_link .nav-icon {
+    margin-left: 0.2em;
     width: 0.5em;
     height: 0.55em;
+    /* transform: translateY(15%); */
   }
   
   .lang-link {

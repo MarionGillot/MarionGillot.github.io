@@ -4,13 +4,13 @@ layout: default
 
 <div class="content-description">
     <div class="mini-info">
-        <ul>
+        <ul class="mini-info-year">
             <li>
                 <h3 class="no-line">{% if page.lang == 'fr' %}Année{% else %}Year{% endif %}</h3>
                 <p>{{ page.date | date: '%Y' }}</p>
             </li>
         </ul>
-        <ul>
+        <ul class="mini-info-software">
             <li>
                 <h3 class="no-line">{% if page.lang == 'fr' %}Logiciels{% else %}Software{% endif %}</h3>
                 {% for software in page.software %}
@@ -30,3 +30,51 @@ layout: default
 
 
 {{ content }}
+
+{% assign projects = site.projects | where: "lang", page.lang | sort: "date" | reverse %}
+{% assign count = projects | size %}
+
+{% if count > 1 %}
+  {% assign current_index = -1 %}
+  {% for p in projects -%}
+    {% if p.url == page.url -%}
+      {% assign current_index = forloop.index0 %}
+    {% endif %}
+  {% endfor %}
+
+  {% if current_index == -1 %}{% assign current_index = 0 %}{% endif %}
+
+  {% assign prev_project = nil %}
+  {% assign next_project = nil %}
+
+  {% if current_index > 0 %}
+    {% assign prev_index = current_index | minus: 1 %}
+    {% assign prev_project = projects[prev_index] %}
+  {% endif %}
+
+  {% assign last_index = count | minus: 1 %}
+  {% if current_index < last_index %}
+    {% assign next_index = current_index | plus: 1 %}
+    {% assign next_project = projects[next_index] %}
+  {% endif %}
+
+  <div class="other">
+    <div class="other__arrow">
+      {% if prev_project %}
+        <a href="{{ prev_project.url | relative_url }}">
+          <img src="{{ '/assets/public/icon/icon_arrow-back.svg' | relative_url }}" alt="icône de flèche : projet précèdent">
+          <p>{% if page.lang == 'fr' %}Projet précèdent{% else %}Previous project{% endif %}</p>
+        </a>
+      {% endif %}
+    </div>
+
+    <div class="other__arrow">
+      {% if next_project %}
+        <a href="{{ next_project.url | relative_url }}">
+          <p>{% if page.lang == 'fr' %}Projet suivant{% else %}Next project{% endif %}</p>
+          <img src="{{ '/assets/public/icon/icon_arrow-after.svg' | relative_url }}" alt="icône de flèche : projet suivant">
+        </a>
+      {% endif %}
+    </div>
+  </div>
+{% endif %}

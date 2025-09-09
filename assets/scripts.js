@@ -14,6 +14,28 @@ window.addEventListener("load", function () {
     imageDesktop.src = "assets/public/icon/icon_moon.svg";
     imageDesktop.alt = "assets/public/icon/icon_sun.svg";
   }
+
+  // Lightbox pour les affiches
+  var affichesContainer = document.querySelector('.img_affiches');
+  if (affichesContainer) {
+    affichesContainer.addEventListener('click', function(e){
+      var target = e.target;
+      if (target && target.tagName === 'IMG') {
+        var overlay = document.createElement('div');
+        overlay.className = 'lightbox-overlay';
+        var bigImg = document.createElement('img');
+        bigImg.src = target.src;
+        bigImg.alt = target.alt || '';
+        overlay.appendChild(bigImg);
+        overlay.addEventListener('click', function(){
+          document.body.classList.remove('lightbox-open');
+          overlay.remove();
+        });
+        document.body.classList.add('lightbox-open');
+        document.body.appendChild(overlay);
+      }
+    });
+  }
 });
 
 window.addEventListener("scroll", reval);
@@ -83,20 +105,7 @@ window.onload = () => {
 }
 
 
-/* Dark Mode desktop  */
-function toggleDarkMode() {
-  var element = document.body;
-  element.classList.toggle("dark");
-
-  var image = document.getElementById("mode-toggle");
-  if (element.classList.contains("dark")) {
-    image.src = "assets/public/icon/icon_sun.svg";
-    image.alt = "assets/public/icon/icon_moon.svg";
-  } else {
-    image.src = "assets/public/icon/icon_moon.svg";
-    image.alt = "assets/public/icon/icon_sun.svg";
-  }
-}
+/* Dark Mode */
 function toggleDarkMode() {
   var element = document.body;
   element.classList.toggle("dark");

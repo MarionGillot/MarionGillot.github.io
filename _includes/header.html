@@ -20,9 +20,9 @@
 
       <nav class="header__menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
         <ul class="menu__list list-unstyled">
-          <li class="menu__item"><a class="menu_link" href="index.html"><span class="nav-text">Accueil</span><img class="nav-icon" src="assets/public/icon/icon_arrow-nav.svg" alt="" aria-hidden="true"></a></li>
-          <li class="menu__item"><a class="menu_link" href="projects.html"><span class="nav-text">Réalisations</span><img class="nav-icon" src="assets/public/icon/icon_arrow-nav.svg" alt="" aria-hidden="true"></a></li>
-          <li class="menu__item"><a class="menu_link" href="apropos.html"><span class="nav-text">À propos</span><img class="nav-icon" src="assets/public/icon/icon_arrow-nav.svg" alt="" aria-hidden="true"></a></li>
+          <li class="menu__item"><a class="mobile_menu_link" href="index.html"><span class="nav-text">Accueil</span><img class="nav-icon mobile_nav_icon" src="assets/public/icon/icon_arrow-nav.svg" alt="" aria-hidden="true"></a></li>
+          <li class="menu__item"><a class="mobile_menu_link" href="projects.html"><span class="nav-text">Réalisations</span><img class="nav-icon mobile_nav_icon" src="assets/public/icon/icon_arrow-nav.svg" alt="" aria-hidden="true"></a></li>
+          <li class="menu__item"><a class="mobile_menu_link" href="apropos.html"><span class="nav-text">À propos</span><img class="nav-icon mobile_nav_icon" src="assets/public/icon/icon_arrow-nav.svg" alt="" aria-hidden="true"></a></li>
         </ul>
       </nav>
     </div>
@@ -87,7 +87,7 @@
   });
 
   function updateHeaderLinksAndLabels() {
-    const links = document.querySelectorAll('.header_menu_link, .menu_link');
+    const links = document.querySelectorAll('.header_menu_link, .mobile_menu_link');
     links.forEach(link => {
       // Update href with language suffix logic
       let href = link.getAttribute('href') || '';

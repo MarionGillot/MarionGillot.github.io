@@ -8,9 +8,8 @@ lang: fr
     <h1 class="projects-header">Réalisations</h1>
 
     <div class="projects-wrapper">
-    {% assign sorted_projects = site.projects | sort: "date" | reverse %}
-    {% for project in sorted_projects %}
-        {% if page.lang != project.lang %}{% continue %}{% endif %}
+    {% assign projects = site.projects | where: "lang", page.lang | sort: "date" | reverse %}
+    {% for project in projects %}
         <div class="overlay-outer">
             <a href="{{ project.url | relative_url }}">
                 <img
