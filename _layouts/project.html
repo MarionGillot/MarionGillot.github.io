@@ -71,8 +71,8 @@ layout: default
     <div class="other__arrow">
       {% if next_project %}
         <a href="{{ next_project.url | relative_url }}">
-          <p>{% if page.lang == 'fr' %}Projet suivant{% else %}Next project{% endif %}</p>
           <img src="{{ '/assets/public/icon/icon_arrow-after.svg' | relative_url }}" alt="icône de flèche : projet suivant">
+          <p>{% if page.lang == 'fr' %}Projet suivant{% else %}Next project{% endif %}</p>
         </a>
       {% endif %}
     </div>

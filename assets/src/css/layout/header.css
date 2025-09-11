@@ -49,7 +49,7 @@ header {
 
   .mobile_menu_link{
     font-size: 2.5em;
-    font-family: var(--font-bebas-neue);
+    font-family: var(--font-nohemi);
   }
 
   .mobile_menu_link .nav-icon {
