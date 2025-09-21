@@ -1,32 +1,3 @@
-  .marquee:not(.torn-down) {
-    overflow: hidden;
-    width: 100%;
-    position: relative;
-    padding-bottom: 0.25em;
-    padding-top: 0.25em;
-    margin-bottom: -0.25em;
-    margin-top: -0.25em;
-    contain: layout;
-}
-
-.marquee[behavior=scroll][direction=horizontal] .marquee_contents{
-  display: inline-flex;
-  white-space: nowrap;
-  min-width: 100%;
-}
-
-.marquee[behavior=scroll] .marquee_inner:first-child {
-  will-change: transform;
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-}
-
-.marquee[behavior=scroll][direction=horizontal] .marquee_inner{
-  min-width: 100%;
-}
-
 /* Curseur */
 :root {
   --cursorX: 0;
@@ -42,44 +13,6 @@
   top: 0;
   left: 0;
   z-index: 9999; /* Peut être important si vous avez un menu en position fixe */
-}
-
-/* Animation de text en cascade pour les projets */
-.text__animation__cascade {
-  position: relative;
-  font-weight: 800;
-}
-
-.text__animation__cascade .text-wrapper {
-  position: relative;
-  display: inline-block;
-  padding-top: 0.2em;
-  padding-right: 0.05em;
-  padding-bottom: 0.1em;
-  overflow: hidden;
-}
-
-.text__animation__cascade .letter {
-  display: inline-block;
-  line-height: 1em;
-}
-
-.animation__title {
-  text-align: center;
-  margin-top: 60%;
-  margin-bottom: 20%;
-  }
-
-.an2{
-  color: var(--impure-black);
-  font-size: 2em;
-  text-transform: uppercase;
-  overflow: hidden;
-}
-
-.an2 .letter {
-  display: inline-block;
-  line-height: 1em;
 }
 
 .bounce {
@@ -109,24 +42,6 @@
   font-weight: 600;
   float: left;
 }
-
-/* Style des lignes noires */
- .black-line {
-  position: absolute;
-  width: 100%;
-  height: 50px;
-  background-color: transparent;
-  border: 2px solid var(--impure-black);
-  z-index: 2;
-} 
-
-/* Animation du texte défilant */
- @keyframes marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-100%); }
-} 
-
-
 
 .fade {
   transition: opacity 1.5s ease, transform 0.5s ease;
@@ -158,22 +73,4 @@
 }
 .fade:nth-child(3) {
   animation-delay: 0.5s;
-}
-
-
-.ltb {
-  position: relative; /* nécessaire pour positionner la barre noire */
-}
-.ltb::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 5px;
-  background-color: white;
-  transition: width 0.3s ease-out; /* transition pour l'animation */
-}
-.ltb:hover::after {
-  width: 100%; /* largeur finale de la barre */
 }

@@ -12,11 +12,6 @@
     transition: all .4s ease-in-out;
   }
 
-.dark .menu {
-  background-color: var(--impure-black);
-}
-
-
   .menu--open {
     visibility: visible;
     opacity: 1;
@@ -40,14 +35,6 @@
     font-family: var(--font-bebas-neue);
   }
   
-  .dark .menu__link {
-    color: var(--impure-white);
-    text-decoration: none;
-    font-size: 60px;
-    font-family: var(--font-bebas-neue);
-  }
-  
-
   /* Mise en forme du bouton de menu "Hamburger" */
   .menu-btn {
     position: relative;
@@ -68,21 +55,7 @@
     z-index: 10;
     transition: all .4s ease-in-out;
   }
-
-
-  .dark .menu-btn__bar {
-    content: '';
-    background: var(--impure-white);
-    height: 1px;
-    width: 100%;
-    position: absolute;
-    left: 0;
-    z-index: 10;
-    transition: all .4s ease-in-out;
-  }
   
-
-
   .menu-btn__bar::before {
     top: -10px;
   }
@@ -104,4 +77,3 @@
     transform: rotate(90deg);
     top: 0;
   }
-  

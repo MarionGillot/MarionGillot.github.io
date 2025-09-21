@@ -69,11 +69,6 @@ button {
   font-weight: 700;  /* Mots gras */
 }
 
-/* Page projets */
-#filter {
-  margin-top: 2%;
-}
-
 /* Page à propos */
 .about__description {
   width: 100%;
@@ -139,15 +134,3 @@ button {
 .juridique__text {
   margin-top: 10%;
 }
-
-
-
-
-
-
-
-
-
-
-
-

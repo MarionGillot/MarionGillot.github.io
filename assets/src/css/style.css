@@ -28,7 +28,6 @@ La règle @import permet d'importer ici tous les fichiers css utilisés.
 /* Layout */
 @import "layout/header.css";
 @import "layout/footer.css";
-@import "layout/forms.css";
 
 /* Components */
 @import "component/menu.css";

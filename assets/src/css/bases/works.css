@@ -13,7 +13,6 @@
   display: grid;
   grid-template-columns: repeat(2, 20%);
   grid-template-rows: auto;
-  gap: 5%;
 }
 
 .mini-info ul {
@@ -180,9 +179,6 @@ color: var(--impure-black);
 @media (max-width: 790px) {
   :root { --project-page-margin: 5%; }
 }
-
-
-
 
 .flex__heritage img {
   height: 500px;

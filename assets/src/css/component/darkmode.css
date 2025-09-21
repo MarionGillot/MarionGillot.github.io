@@ -13,21 +13,6 @@
 
 .dark .card__text {color: var(--impure-black);}
 
-.dark .btn_contact {
-    border: var(--impure-white);
-    color: var(--impure-black);
-    background: var(--impure-white);
-}
-
-.dark
-  .face-button .face-primary,
-  .face-button .face-secondary {
-    background-color: var(--impure-white);
-    color: var(--impure-black);
-    border: 1rem;
-    border: 1px solid  var(--impure-white);
-}
-
 .dark .form__input input {
   border-bottom: 1px solid var(--impure-white);
 }
@@ -83,12 +68,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 9999; /* Peut être important si vous avez un menu en position fixe */
+  z-index: 9999; /* Peut être important si menu en position fixe */
 }
-
-
-
-
 
 /* Header */
 .dark .desktop-header {
@@ -115,6 +96,28 @@
 .dark .nav-text {
   color: var(--impure-white);
 }
+
+.dark .menu {
+  background-color: var(--impure-black);
+}
+
+.dark .menu__link {
+    color: var(--impure-white);
+    text-decoration: none;
+    font-size: 60px;
+    font-family: var(--font-bebas-neue);
+  }
+  
+.dark .menu-btn__bar {
+    content: '';
+    background: var(--impure-white);
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    transition: all .4s ease-in-out;
+  }
 
 /* Footer */
 .dark .footer {
