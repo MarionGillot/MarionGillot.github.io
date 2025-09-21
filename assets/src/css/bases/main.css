@@ -122,7 +122,7 @@ button {
 }
 
 .number {
-  color: var(--gray);
+  color: black;
   line-height: 1;
   margin: 0;
   display: flex;
